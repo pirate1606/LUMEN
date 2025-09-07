@@ -337,27 +337,69 @@ export default function Technical() {
         <div id="toc" className="mt-8 grid lg:grid-cols-1 gap-6">
           <Card title="Table of Contents">
             <ol className="list-decimal pl-5 space-y-1 text-sm">
-              <li><a href="#cover" className="text-brand-blue underline">Cover Page</a>
+              <li>
+                <a href="#cover" className="text-brand-blue underline">
+                  Cover Page
+                </a>
                 <ol className="list-decimal pl-5 mt-1 space-y-1">
                   <li>Team Name & Member Details</li>
                   <li>Institution & Branch</li>
                 </ol>
               </li>
-              <li><a href="#problem" className="text-brand-blue underline">Problem Statement</a></li>
-              <li><a href="#solution" className="text-brand-blue underline">Proposed Solution</a>
+              <li>
+                <a href="#problem" className="text-brand-blue underline">
+                  Problem Statement
+                </a>
+              </li>
+              <li>
+                <a href="#solution" className="text-brand-blue underline">
+                  Proposed Solution
+                </a>
                 <ol className="list-decimal pl-5 mt-1 space-y-1">
                   <li>Overview of Features</li>
                   <li>Interactive Architecture Diagram</li>
                 </ol>
               </li>
-              <li><a href="#features" className="text-brand-blue underline">Features</a></li>
-              <li><a href="#openai" className="text-brand-blue underline">Role of OpenAI Tools</a></li>
-              <li><a href="#techstack" className="text-brand-blue underline">Prototype Phase Tech Stack</a></li>
-              <li><a href="#feasibility" className="text-brand-blue underline">Feasibility</a></li>
-              <li><a href="#novelty" className="text-brand-blue underline">Novelty</a></li>
-              <li><a href="#impact" className="text-brand-blue underline">Impact & Benefits</a></li>
-              <li><a href="#future" className="text-brand-blue underline">Future Scope</a></li>
-              <li><a href="#references" className="text-brand-blue underline">References (IEEE)</a></li>
+              <li>
+                <a href="#features" className="text-brand-blue underline">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#openai" className="text-brand-blue underline">
+                  Role of OpenAI Tools
+                </a>
+              </li>
+              <li>
+                <a href="#techstack" className="text-brand-blue underline">
+                  Prototype Phase Tech Stack
+                </a>
+              </li>
+              <li>
+                <a href="#feasibility" className="text-brand-blue underline">
+                  Feasibility
+                </a>
+              </li>
+              <li>
+                <a href="#novelty" className="text-brand-blue underline">
+                  Novelty
+                </a>
+              </li>
+              <li>
+                <a href="#impact" className="text-brand-blue underline">
+                  Impact & Benefits
+                </a>
+              </li>
+              <li>
+                <a href="#future" className="text-brand-blue underline">
+                  Future Scope
+                </a>
+              </li>
+              <li>
+                <a href="#references" className="text-brand-blue underline">
+                  References (IEEE)
+                </a>
+              </li>
             </ol>
           </Card>
         </div>
@@ -368,21 +410,37 @@ export default function Technical() {
             <div className="space-y-2">
               <div className="font-medium">2.1 Healthcare Gaps in India</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>India faces uneven access to timely, quality healthcare.</li>
-                <li>Rural populations (~65%) have limited primary and specialist care.</li>
+                <li>
+                  India faces uneven access to timely, quality healthcare.
+                </li>
+                <li>
+                  Rural populations (~65%) have limited primary and specialist
+                  care.
+                </li>
               </ul>
               <div className="font-medium mt-2">2.2 Statistics & Citations</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Doctor density is ~20.6 per 10,000 vs WHO 44.5 benchmark.</li>
-                <li>~58,000 snakebite deaths annually due to delayed triage.</li>
+                <li>
+                  Doctor density is ~20.6 per 10,000 vs WHO 44.5 benchmark.
+                </li>
+                <li>
+                  ~58,000 snakebite deaths annually due to delayed triage.
+                </li>
               </ul>
-              <div className="font-medium mt-2">2.3 Impact on Rural and Semi-Urban Populations</div>
+              <div className="font-medium mt-2">
+                2.3 Impact on Rural and Semi-Urban Populations
+              </div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>CT overuse risks and lab follow‑up delays affect outcomes.</li>
-                <li>Low awareness of government health schemes limits uptake.</li>
+                <li>
+                  CT overuse risks and lab follow‑up delays affect outcomes.
+                </li>
+                <li>
+                  Low awareness of government health schemes limits uptake.
+                </li>
               </ul>
               <p>
-                LUMEN bridges these gaps with localized, multimodal guidance and structured outputs.
+                LUMEN bridges these gaps with localized, multimodal guidance and
+                structured outputs.
               </p>
             </div>
           </Card>
@@ -393,7 +451,9 @@ export default function Technical() {
           <Card title="Proposed Solution – Overview of Features">
             <ul className="list-disc pl-5 space-y-1">
               <li>Symptoms‑based triage with severity bands and next steps.</li>
-              <li>AI specialist modules (dermatology, radiology, cardiology).</li>
+              <li>
+                AI specialist modules (dermatology, radiology, cardiology).
+              </li>
               <li>Multilingual, voice‑first chatbot.</li>
               <li>PEARL CT reconstruction previews.</li>
               <li>Lab report analyzer with follow‑up generation.</li>
@@ -420,32 +480,68 @@ export default function Technical() {
         <div id="features" className="mt-10 grid lg:grid-cols-1 gap-6">
           <Card title="Features">
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3"><Stethoscope className="text-brand-blue" />
-                <div><div className="font-medium">4.1 Symptoms‑Based Diagnosis & Guidance</div><p>Severity bands with clear next steps.</p></div>
+              <div className="flex items-start gap-3">
+                <Stethoscope className="text-brand-blue" />
+                <div>
+                  <div className="font-medium">
+                    4.1 Symptoms‑Based Diagnosis & Guidance
+                  </div>
+                  <p>Severity bands with clear next steps.</p>
+                </div>
               </div>
-              <div className="flex items-start gap-3"><Cpu className="text-brand-blue" />
-                <div><div className="font-medium">4.2 AI Specialist Modules</div><p>Dermatology, radiology, cardiology decision aids.</p></div>
+              <div className="flex items-start gap-3">
+                <Cpu className="text-brand-blue" />
+                <div>
+                  <div className="font-medium">4.2 AI Specialist Modules</div>
+                  <p>Dermatology, radiology, cardiology decision aids.</p>
+                </div>
               </div>
-              <div className="flex items-start gap-3"><Languages className="text-brand-blue" />
-                <div><div className="font-medium">4.3 Multilingual Voice‑First Chatbot</div><p>Indic languages with TTS.</p></div>
+              <div className="flex items-start gap-3">
+                <Languages className="text-brand-blue" />
+                <div>
+                  <div className="font-medium">
+                    4.3 Multilingual Voice‑First Chatbot
+                  </div>
+                  <p>Indic languages with TTS.</p>
+                </div>
               </div>
-              <div className="flex items-start gap-3"><Activity className="text-brand-teal" />
-                <div><div className="font-medium">4.4 PEARL CT Reconstruction</div><p>Low‑dose previews with guidance.</p></div>
+              <div className="flex items-start gap-3">
+                <Activity className="text-brand-teal" />
+                <div>
+                  <div className="font-medium">4.4 PEARL CT Reconstruction</div>
+                  <p>Low‑dose previews with guidance.</p>
+                </div>
               </div>
-              <div className="flex items-start gap-3"><FlaskConical className="text-brand-teal" />
-                <div><div className="font-medium">4.5 Lab Report Analyzer & Follow‑Up Generator</div><p>OCR, reference ranges, actionable follow‑ups.</p></div>
+              <div className="flex items-start gap-3">
+                <FlaskConical className="text-brand-teal" />
+                <div>
+                  <div className="font-medium">
+                    4.5 Lab Report Analyzer & Follow‑Up Generator
+                  </div>
+                  <p>OCR, reference ranges, actionable follow‑ups.</p>
+                </div>
               </div>
-              <div className="flex items-start gap-3"><Landmark className="text-brand-teal" />
-                <div><div className="font-medium">4.6 Government Schemes & Benefits Assistant</div><p>Eligibility checks via embeddings + vector DB.</p></div>
+              <div className="flex items-start gap-3">
+                <Landmark className="text-brand-teal" />
+                <div>
+                  <div className="font-medium">
+                    4.6 Government Schemes & Benefits Assistant
+                  </div>
+                  <p>Eligibility checks via embeddings + vector DB.</p>
+                </div>
               </div>
-              <div className="flex items-start gap-3"><BadgeAlert className="text-cta" />
-                <div><div className="font-medium">4.7 Preliminary Triage & Emergency Education</div><p>Audio‑guided first aid tiles.</p></div>
+              <div className="flex items-start gap-3">
+                <BadgeAlert className="text-cta" />
+                <div>
+                  <div className="font-medium">
+                    4.7 Preliminary Triage & Emergency Education
+                  </div>
+                  <p>Audio‑guided first aid tiles.</p>
+                </div>
               </div>
             </div>
           </Card>
         </div>
-
-
 
         {/* Role of OpenAI Tools */}
         <div id="openai" className="mt-6">
@@ -614,7 +710,9 @@ export default function Technical() {
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Multimodal, localized triage with voice‑first UX.</li>
                   <li>Clinical‑aware PEARL imaging with uncertainty cues.</li>
-                  <li>Structured lab parsing with reference‑range evaluation.</li>
+                  <li>
+                    Structured lab parsing with reference‑range evaluation.
+                  </li>
                   <li>Grounded scheme retrieval via embeddings + vector DB.</li>
                   <li>Safety‑first pipelines and human‑in‑the‑loop review.</li>
                   <li>Extensible Node/Express + optional Python services.</li>
@@ -643,7 +741,8 @@ export default function Technical() {
               <li>Faster lab follow‑up and awareness of health schemes.</li>
             </ul>
           </Card>
-          <Card title="Future Scope"><div id="future" />
+          <Card title="Future Scope">
+            <div id="future" />
             <ul className="list-disc pl-5 space-y-1">
               <li>Expand Indic language coverage and TTS voices.</li>
               <li>
