@@ -291,7 +291,9 @@ export default function Technical() {
               <div className="font-medium">
                 Vishwakarma Institute of Technology, Pune
               </div>
-              <div className="text-sm">Department of Computer Engineering & IT</div>
+              <div className="text-sm">
+                Department of Computer Engineering & IT
+              </div>
             </div>
             <div className="rounded-lg border p-3 bg-secondary/40">
               <div className="font-medium">Team LUMEN</div>
@@ -369,25 +371,51 @@ export default function Technical() {
           <Card title="Problem Statement">
             <div className="space-y-3 text-sm">
               <p>
-                How can we address the critical gaps in India’s rural healthcare system, where millions suffer preventable morbidity and mortality due to lack of timely access, poor triage knowledge, and over‑reliance on costly, repeated imaging?
+                How can we address the critical gaps in India’s rural healthcare
+                system, where millions suffer preventable morbidity and
+                mortality due to lack of timely access, poor triage knowledge,
+                and over‑reliance on costly, repeated imaging?
               </p>
               <p>
-                A significant portion of India’s population, especially in rural and semi‑urban areas, lacks timely access to qualified medical care, suffers preventable morbidity and mortality due to inadequate triage knowledge, and faces high costs and radiation exposure from repeated CT scans.
+                A significant portion of India’s population, especially in rural
+                and semi‑urban areas, lacks timely access to qualified medical
+                care, suffers preventable morbidity and mortality due to
+                inadequate triage knowledge, and faces high costs and radiation
+                exposure from repeated CT scans.
               </p>
               <div className="font-medium">2.1 Healthcare Gaps in India</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Over 900M rural residents (~65% of population) face poor access; PHCs/CHCs are below prescribed standards.</li>
-                <li>PHC staffing gaps: missing doctors, lab technicians, and pharmacists; CHCs face 76–83% specialist vacancies.</li>
+                <li>
+                  Over 900M rural residents (~65% of population) face poor
+                  access; PHCs/CHCs are below prescribed standards.
+                </li>
+                <li>
+                  PHC staffing gaps: missing doctors, lab technicians, and
+                  pharmacists; CHCs face 76–83% specialist vacancies.
+                </li>
               </ul>
               <div className="font-medium">2.2 Statistics & Citations</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Doctor/nurse/midwife density: 20.6 per 10,000 vs WHO’s 44.5 benchmark.</li>
-                <li>Snakebites cause ~58,000 deaths annually; ~70% in rural areas due to delays and lack of first‑aid knowledge.</li>
+                <li>
+                  Doctor/nurse/midwife density: 20.6 per 10,000 vs WHO’s 44.5
+                  benchmark.
+                </li>
+                <li>
+                  Snakebites cause ~58,000 deaths annually; ~70% in rural areas
+                  due to delays and lack of first‑aid knowledge.
+                </li>
               </ul>
-              <div className="font-medium">2.3 Impact on Rural and Semi‑Urban Populations</div>
+              <div className="font-medium">
+                2.3 Impact on Rural and Semi‑Urban Populations
+              </div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Unnecessary deaths, inefficient referrals, repeated costly imaging.</li>
-                <li>Low awareness of government health schemes and benefits.</li>
+                <li>
+                  Unnecessary deaths, inefficient referrals, repeated costly
+                  imaging.
+                </li>
+                <li>
+                  Low awareness of government health schemes and benefits.
+                </li>
               </ul>
             </div>
           </Card>
@@ -593,7 +621,9 @@ export default function Technical() {
                   </table>
                 </div>
                 <p className="text-xs text-muted-foreground mt-3">
-                  5.2 Prototype Phase: where possible, we use free/open models (HF) mapped in the third column for local testing; production will use hosted OpenAI for latency and reliability.
+                  5.2 Prototype Phase: where possible, we use free/open models
+                  (HF) mapped in the third column for local testing; production
+                  will use hosted OpenAI for latency and reliability.
                 </p>
               </div>
             </Card>
@@ -646,37 +676,64 @@ export default function Technical() {
               <div>
                 <div className="font-medium">7.1 Technical Feasibility</div>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Prototype: HF free models (Indic‑GPT, Donut, Whisper‑small).</li>
-                  <li>Production: OpenAI (GPT‑4o, Whisper, DALL·E) + custom PEARL CT pipeline.</li>
-                  <li>Infrastructure: React + Tailwind (FE), Node/Express or FastAPI (BE), Docker.</li>
+                  <li>
+                    Prototype: HF free models (Indic‑GPT, Donut, Whisper‑small).
+                  </li>
+                  <li>
+                    Production: OpenAI (GPT‑4o, Whisper, DALL·E) + custom PEARL
+                    CT pipeline.
+                  </li>
+                  <li>
+                    Infrastructure: React + Tailwind (FE), Node/Express or
+                    FastAPI (BE), Docker.
+                  </li>
                 </ul>
               </div>
               <div>
                 <div className="font-medium">7.2 Operational Feasibility</div>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Addresses rural gaps, triage delays, and lab follow‑up inefficiencies.</li>
-                  <li>Multilingual voice‑first UX lowers literacy barriers; offline‑first design for low connectivity.</li>
+                  <li>
+                    Addresses rural gaps, triage delays, and lab follow‑up
+                    inefficiencies.
+                  </li>
+                  <li>
+                    Multilingual voice‑first UX lowers literacy barriers;
+                    offline‑first design for low connectivity.
+                  </li>
                 </ul>
               </div>
               <div>
                 <div className="font-medium">7.3 Economic Feasibility</div>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Prototype: minimal (HF, Netlify, Firebase free tiers).</li>
+                  <li>
+                    Prototype: minimal (HF, Netlify, Firebase free tiers).
+                  </li>
                   <li>Production: API (OpenAI), GPU (CT), storage (S3).</li>
-                  <li>ROI: reduce preventable deaths; avoid unnecessary visits and repeated CT scans.</li>
+                  <li>
+                    ROI: reduce preventable deaths; avoid unnecessary visits and
+                    repeated CT scans.
+                  </li>
                 </ul>
               </div>
               <div>
                 <div className="font-medium">7.4 Legal Feasibility</div>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Compliance: GDPR/HIPAA‑like practices; informed consent.</li>
+                  <li>
+                    Compliance: GDPR/HIPAA‑like practices; informed consent.
+                  </li>
                 </ul>
               </div>
               <div>
                 <div className="font-medium">7.5 Market Feasibility</div>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Target: 900M+ rural/semi‑urban users; rising smartphone access.</li>
-                  <li>Competition: urban‑focused apps; none combine triage + labs + CT + schemes end‑to‑end.</li>
+                  <li>
+                    Target: 900M+ rural/semi‑urban users; rising smartphone
+                    access.
+                  </li>
+                  <li>
+                    Competition: urban‑focused apps; none combine triage + labs
+                    + CT + schemes end‑to‑end.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -688,33 +745,51 @@ export default function Technical() {
           <div className="grid lg:grid-cols-1 gap-6">
             <Card title="Novelty">
               <div className="space-y-4 text-sm">
-              <div>
-                <div className="font-medium">Technical Novelties</div>
-                <ol className="list-decimal pl-5 space-y-1">
-                  <li>
-                    PEARL CT Reconstruction: tri‑model pipeline (PerX2CT + XctDiff + SAX‑NeRF) for low‑dose CT estimation with voxel‑level uncertainty.
-                  </li>
-                  <li>
-                    Integrated AI Healthcare Engine combining triage, specialist modules, lab parsing, and scheme retrieval in one.
-                  </li>
-                  <li>
-                    Multilingual, voice‑first accessibility using Whisper + GPT for 5+ Indian languages.
-                  </li>
-                  <li>
-                    Grounded AI with medical guidelines and scheme KB to reduce hallucinations.
-                  </li>
-                </ol>
+                <div>
+                  <div className="font-medium">Technical Novelties</div>
+                  <ol className="list-decimal pl-5 space-y-1">
+                    <li>
+                      PEARL CT Reconstruction: tri‑model pipeline (PerX2CT +
+                      XctDiff + SAX‑NeRF) for low‑dose CT estimation with
+                      voxel‑level uncertainty.
+                    </li>
+                    <li>
+                      Integrated AI Healthcare Engine combining triage,
+                      specialist modules, lab parsing, and scheme retrieval in
+                      one.
+                    </li>
+                    <li>
+                      Multilingual, voice‑first accessibility using Whisper +
+                      GPT for 5+ Indian languages.
+                    </li>
+                    <li>
+                      Grounded AI with medical guidelines and scheme KB to
+                      reduce hallucinations.
+                    </li>
+                  </ol>
+                </div>
+                <div>
+                  <div className="font-medium">Practical Novelties</div>
+                  <ol className="list-decimal pl-5 space-y-1">
+                    <li>
+                      Emergency first‑aid & triage education with
+                      voice/text/visuals in local languages.
+                    </li>
+                    <li>
+                      Lab report analyzer with actionable, diet/lifestyle
+                      guidance.
+                    </li>
+                    <li>
+                      Government scheme assistant explaining eligibility and
+                      steps in local language.
+                    </li>
+                    <li>
+                      Optimized for rural/low‑connectivity via hybrid/on‑device
+                      design.
+                    </li>
+                  </ol>
+                </div>
               </div>
-              <div>
-                <div className="font-medium">Practical Novelties</div>
-                <ol className="list-decimal pl-5 space-y-1">
-                  <li>Emergency first‑aid & triage education with voice/text/visuals in local languages.</li>
-                  <li>Lab report analyzer with actionable, diet/lifestyle guidance.</li>
-                  <li>Government scheme assistant explaining eligibility and steps in local language.</li>
-                  <li>Optimized for rural/low‑connectivity via hybrid/on‑device design.</li>
-                </ol>
-              </div>
-            </div>
             </Card>
           </div>
         </div>
@@ -725,17 +800,29 @@ export default function Technical() {
             <div className="space-y-2 text-sm">
               <div className="font-medium">9.1 Quantitative Benefits</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Reduction in preventable morbidity and mortality (e.g., ~58k annual snakebite deaths).</li>
-                <li>Cost savings via better triage and fewer repeated CT scans.</li>
-                <li>Improved diagnostic efficiency with automated labs and specialist guidance.</li>
+                <li>
+                  Reduction in preventable morbidity and mortality (e.g., ~58k
+                  annual snakebite deaths).
+                </li>
+                <li>
+                  Cost savings via better triage and fewer repeated CT scans.
+                </li>
+                <li>
+                  Improved diagnostic efficiency with automated labs and
+                  specialist guidance.
+                </li>
               </ul>
               <div className="font-medium">9.2 Potential Beneficiaries</div>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Rural and semi‑urban populations (900M+).</li>
                 <li>PHCs & CHCs: decision support for frontline workers.</li>
-                <li>Government scheme beneficiaries (e.g., Ayushman Bharat).</li>
+                <li>
+                  Government scheme beneficiaries (e.g., Ayushman Bharat).
+                </li>
               </ul>
-              <div className="font-medium">9.3 Awareness & Accessibility Gains</div>
+              <div className="font-medium">
+                9.3 Awareness & Accessibility Gains
+              </div>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Multilingual, voice‑first interface.</li>
                 <li>Offline‑first design for low/no connectivity.</li>
@@ -746,10 +833,19 @@ export default function Technical() {
           <Card title="Future Scope">
             <div id="future" />
             <ul className="list-disc pl-5 space-y-1">
-              <li>Language expansion for more Indian languages and dialects.</li>
-              <li>Additional specialist modules (Pediatrics, OBGYN, Psychiatry, Neurology).</li>
-              <li>NGO & hospital integrations for field operations and referrals.</li>
-              <li>Offline‑first Android app with preloaded protocols and schemes.</li>
+              <li>
+                Language expansion for more Indian languages and dialects.
+              </li>
+              <li>
+                Additional specialist modules (Pediatrics, OBGYN, Psychiatry,
+                Neurology).
+              </li>
+              <li>
+                NGO & hospital integrations for field operations and referrals.
+              </li>
+              <li>
+                Offline‑first Android app with preloaded protocols and schemes.
+              </li>
               <li>Predictive healthcare analytics for early risk warnings.</li>
             </ul>
           </Card>
@@ -759,14 +855,34 @@ export default function Technical() {
         <div id="references" className="mt-6 grid lg:grid-cols-1 gap-6">
           <Card title="References (IEEE Format)">
             <ol className="list-decimal pl-5 space-y-1 text-sm">
-              <li>“Healthcare Access in Rural Communities in India,” Ballard Brief, 18‑Dec‑2024.</li>
-              <li>A. P. Ugargol et al., “In search of a fix to the primary health care chasm in India,” PMC, 2023.</li>
-              <li>A. Nair et al., “Workforce problems at rural public health‑centres in India,” Human Resources for Health, 2022.</li>
-              <li>W. Suraweera et al., “Trends in snakebite deaths in India from 2000 to 2019,” eLife, 2020.</li>
+              <li>
+                “Healthcare Access in Rural Communities in India,” Ballard
+                Brief, 18‑Dec‑2024.
+              </li>
+              <li>
+                A. P. Ugargol et al., “In search of a fix to the primary health
+                care chasm in India,” PMC, 2023.
+              </li>
+              <li>
+                A. Nair et al., “Workforce problems at rural public
+                health‑centres in India,” Human Resources for Health, 2022.
+              </li>
+              <li>
+                W. Suraweera et al., “Trends in snakebite deaths in India from
+                2000 to 2019,” eLife, 2020.
+              </li>
               <li>“Snakebite,” Wikipedia, 2025.</li>
-              <li>“India still struggles with rural doctor shortages,” ResearchGate/Axios, 2025.</li>
-              <li>“Healthcare Access in Rural India,” docboxmed.com, 23‑Sep‑2024.</li>
-              <li>Times of India reports on snakebite incidents and outcomes, 2025.</li>
+              <li>
+                “India still struggles with rural doctor shortages,”
+                ResearchGate/Axios, 2025.
+              </li>
+              <li>
+                “Healthcare Access in Rural India,” docboxmed.com, 23‑Sep‑2024.
+              </li>
+              <li>
+                Times of India reports on snakebite incidents and outcomes,
+                2025.
+              </li>
             </ol>
           </Card>
         </div>
