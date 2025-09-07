@@ -267,22 +267,29 @@ export default function Technical() {
         {/* Cover Page (non-card) */}
         <div className="mt-6 space-y-6">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">LUMEN – Localized Unified Medical ENgine for Triage</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              LUMEN – Localized Unified Medical ENgine for Triage
+            </h2>
             <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">
-              Unified assistant for preliminary triage, diagnostics explanation, CT reconstruction previews,
-              lab report interpretation, and mapping citizens to government schemes.
+              Unified assistant for preliminary triage, diagnostics explanation,
+              CT reconstruction previews, lab report interpretation, and mapping
+              citizens to government schemes.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
             <div className="rounded-lg border p-3 bg-secondary/40">
               <div className="text-xs text-muted-foreground">Institution</div>
-              <div className="font-medium">Vishwakarma Institute of Technology, Pune</div>
+              <div className="font-medium">
+                Vishwakarma Institute of Technology, Pune
+              </div>
               <div className="text-sm">Department of Computer Engineering</div>
             </div>
             <div className="rounded-lg border p-3 bg-secondary/40">
               <div className="text-xs text-muted-foreground">Team</div>
               <div className="font-medium">Team LUMEN</div>
-              <div className="text-sm">AI/ML • Frontend • Backend • Research</div>
+              <div className="text-sm">
+                AI/ML • Frontend • Backend • Research
+              </div>
             </div>
           </div>
           <div className="relative flex justify-center w-full overflow-x-auto">
@@ -340,7 +347,9 @@ export default function Technical() {
                 Preventable emergencies (e.g., ~58,000 snakebite deaths
                 annually) persist due to delayed triage and guidance.
               </li>
-              <li>CT overuse risks and lab follow-up delays affect outcomes.</li>
+              <li>
+                CT overuse risks and lab follow-up delays affect outcomes.
+              </li>
               <li>Low awareness of government health schemes limits uptake.</li>
             </ul>
             <p>
@@ -429,22 +438,33 @@ export default function Technical() {
               <div className="flex items-start gap-3">
                 <Stethoscope className="text-brand-blue" />
                 <div>
-                  <div className="font-medium">Symptoms-Based Diagnosis & Guidance</div>
-                  <p>Collect symptoms, compute severity bands, and offer clear next steps.</p>
+                  <div className="font-medium">
+                    Symptoms-Based Diagnosis & Guidance
+                  </div>
+                  <p>
+                    Collect symptoms, compute severity bands, and offer clear
+                    next steps.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Cpu className="text-brand-blue" />
                 <div>
                   <div className="font-medium">AI Specialist Modules</div>
-                  <p>Dermatology, radiology, cardiology reasoning with tools and checklists.</p>
+                  <p>
+                    Dermatology, radiology, cardiology reasoning with tools and
+                    checklists.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Languages className="text-brand-blue" />
                 <div>
                   <div className="font-medium">Multilingual Chatbot</div>
-                  <p>Indic languages with voice-first UX; English fallback where needed.</p>
+                  <p>
+                    Indic languages with voice-first UX; English fallback where
+                    needed.
+                  </p>
                 </div>
               </div>
             </div>
@@ -456,28 +476,46 @@ export default function Technical() {
                 <Activity className="text-brand-teal" />
                 <div>
                   <div className="font-medium">PEARL CT Reconstruction</div>
-                  <p>Low‑dose reconstruction previews with uncertainty cues and dose notes.</p>
+                  <p>
+                    Low‑dose reconstruction previews with uncertainty cues and
+                    dose notes.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <FlaskConical className="text-brand-teal" />
                 <div>
-                  <div className="font-medium">Lab Report Analyzer & Follow‑Up Generator</div>
-                  <p>OCR + reference ranges, flags, and structured follow‑ups users can act on.</p>
+                  <div className="font-medium">
+                    Lab Report Analyzer & Follow‑Up Generator
+                  </div>
+                  <p>
+                    OCR + reference ranges, flags, and structured follow‑ups
+                    users can act on.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Landmark className="text-brand-teal" />
                 <div>
-                  <div className="font-medium">Government Schemes & Benefits Assistant</div>
-                  <p>Retrieval‑grounded matching to central/state schemes with eligibility steps.</p>
+                  <div className="font-medium">
+                    Government Schemes & Benefits Assistant
+                  </div>
+                  <p>
+                    Retrieval‑grounded matching to central/state schemes with
+                    eligibility steps.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <BadgeAlert className="text-cta" />
                 <div>
-                  <div className="font-medium">Preliminary Triage & Emergency Education</div>
-                  <p>Audio‑guided first aid tiles for high‑impact emergencies like snakebite.</p>
+                  <div className="font-medium">
+                    Preliminary Triage & Emergency Education
+                  </div>
+                  <p>
+                    Audio‑guided first aid tiles for high‑impact emergencies
+                    like snakebite.
+                  </p>
                 </div>
               </div>
             </div>
@@ -492,10 +530,20 @@ export default function Technical() {
                 <Workflow className="text-brand-teal" /> Module Interactions
               </div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Client → API Gateway: validation, PII minimization, safety filters.</li>
-                <li>Router → Tools: vector search, calculators, retrieval, OCR.</li>
-                <li>LLM reasoning → Structured outputs (JSON) → Localization & TTS.</li>
-                <li>Observability: audit logs, red‑team prompts, feedback loop.</li>
+                <li>
+                  Client → API Gateway: validation, PII minimization, safety
+                  filters.
+                </li>
+                <li>
+                  Router → Tools: vector search, calculators, retrieval, OCR.
+                </li>
+                <li>
+                  LLM reasoning → Structured outputs (JSON) → Localization &
+                  TTS.
+                </li>
+                <li>
+                  Observability: audit logs, red‑team prompts, feedback loop.
+                </li>
               </ul>
             </div>
           </Card>
@@ -514,13 +562,16 @@ export default function Technical() {
               </div>
               <div>
                 <div className="font-medium flex items-center gap-2">
-                  <Cpu className="text-brand-blue" /> CT Reconstruction (PEARL‑inspired)
+                  <Cpu className="text-brand-blue" /> CT Reconstruction
+                  (PEARL‑inspired)
                 </div>
                 <ol className="list-decimal pl-5 space-y-1 mt-1">
                   <li>Upload DICOM → pre‑processing.</li>
                   <li>Low‑dose reconstruction → enhanced slices/volume.</li>
                   <li>Viewer renders previews; export anonymized summaries.</li>
-                  <li>Non‑diagnostic disclaimer and radiation notes surfaced.</li>
+                  <li>
+                    Non‑diagnostic disclaimer and radiation notes surfaced.
+                  </li>
                 </ol>
               </div>
               <div>
@@ -544,12 +595,18 @@ export default function Technical() {
               <div className="space-y-2">
                 <p className="text-sm">
                   <BookOpen className="inline mr-2" /> LUMEN differs from
-                  generic AI models in key ways—see <a href="/README.md" className="text-brand-blue underline">README.md</a> for the full overview.
+                  generic AI models in key ways—see{" "}
+                  <a href="/README.md" className="text-brand-blue underline">
+                    README.md
+                  </a>{" "}
+                  for the full overview.
                 </p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Multimodal, localized triage with voice‑first UX.</li>
                   <li>Clinical‑aware PEARL imaging with uncertainty cues.</li>
-                  <li>Structured lab parsing with reference‑range evaluation.</li>
+                  <li>
+                    Structured lab parsing with reference‑range evaluation.
+                  </li>
                   <li>Grounded scheme retrieval via embeddings + vector DB.</li>
                   <li>Safety‑first pipelines and human‑in‑the‑loop review.</li>
                   <li>Extensible Node/Express + optional Python services.</li>
@@ -570,50 +627,99 @@ export default function Technical() {
                       <tr className="text-left text-xs text-muted-foreground">
                         <th className="px-3 py-2">Feature</th>
                         <th className="px-3 py-2">OpenAI Model / Tool</th>
-                        <th className="px-3 py-2">Prototype Model (Hugging Face)</th>
+                        <th className="px-3 py-2">
+                          Prototype Model (Hugging Face)
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr className="border-t">
-                        <td className="px-3 py-2 align-top">Multilingual Chatbot (Core Conversations)</td>
+                        <td className="px-3 py-2 align-top">
+                          Multilingual Chatbot (Core Conversations)
+                        </td>
                         <td className="px-3 py-2 align-top">GPT‑4 / GPT‑5</td>
-                        <td className="px-3 py-2 align-top"><code className="rounded px-1 py-0.5 bg-muted text-xs">ai4bharat/indic-gpt</code></td>
+                        <td className="px-3 py-2 align-top">
+                          <code className="rounded px-1 py-0.5 bg-muted text-xs">
+                            ai4bharat/indic-gpt
+                          </code>
+                        </td>
                       </tr>
                       <tr className="border-t">
-                        <td className="px-3 py-2 align-top">Voice Input (Speech → Text)</td>
+                        <td className="px-3 py-2 align-top">
+                          Voice Input (Speech → Text)
+                        </td>
                         <td className="px-3 py-2 align-top">Whisper</td>
-                        <td className="px-3 py-2 align-top"><code className="rounded px-1 py-0.5 bg-muted text-xs">openai/whisper-small</code></td>
+                        <td className="px-3 py-2 align-top">
+                          <code className="rounded px-1 py-0.5 bg-muted text-xs">
+                            openai/whisper-small
+                          </code>
+                        </td>
                       </tr>
                       <tr className="border-t">
-                        <td className="px-3 py-2 align-top">Voice Output (Text → Speech)</td>
+                        <td className="px-3 py-2 align-top">
+                          Voice Output (Text → Speech)
+                        </td>
                         <td className="px-3 py-2 align-top">OpenAI TTS</td>
-                        <td className="px-3 py-2 align-top"><code className="rounded px-1 py-0.5 bg-muted text-xs">coqui/XTTS-v2</code></td>
+                        <td className="px-3 py-2 align-top">
+                          <code className="rounded px-1 py-0.5 bg-muted text-xs">
+                            coqui/XTTS-v2
+                          </code>
+                        </td>
                       </tr>
                       <tr className="border-t">
-                        <td className="px-3 py-2 align-top">Lab Report Analyzer (OCR + Interpretation)</td>
+                        <td className="px-3 py-2 align-top">
+                          Lab Report Analyzer (OCR + Interpretation)
+                        </td>
                         <td className="px-3 py-2 align-top">GPT‑4 / GPT‑5</td>
-                        <td className="px-3 py-2 align-top"><code className="rounded px-1 py-0.5 bg-muted text-xs">naver-clova-ix/donut-base-finetuned-docvqa</code></td>
+                        <td className="px-3 py-2 align-top">
+                          <code className="rounded px-1 py-0.5 bg-muted text-xs">
+                            naver-clova-ix/donut-base-finetuned-docvqa
+                          </code>
+                        </td>
                       </tr>
                       <tr className="border-t">
-                        <td className="px-3 py-2 align-top">Image‑based Dermatology / Skin Issues</td>
+                        <td className="px-3 py-2 align-top">
+                          Image‑based Dermatology / Skin Issues
+                        </td>
                         <td className="px-3 py-2 align-top">GPT‑4‑Vision</td>
-                        <td className="px-3 py-2 align-top"><code className="rounded px-1 py-0.5 bg-muted text-xs">Salesforce/blip-image-captioning-base</code></td>
+                        <td className="px-3 py-2 align-top">
+                          <code className="rounded px-1 py-0.5 bg-muted text-xs">
+                            Salesforce/blip-image-captioning-base
+                          </code>
+                        </td>
                       </tr>
                       <tr className="border-t">
-                        <td className="px-3 py-2 align-top">Emergency Triage & First Aid Education</td>
-                        <td className="px-3 py-2 align-top">GPT‑4 / GPT‑5 + Embeddings</td>
-                        <td className="px-3 py-2 align-top"><code className="rounded px-1 py-0.5 bg-muted text-xs">sentence-transformers/all-mpnet-base-v2</code></td>
+                        <td className="px-3 py-2 align-top">
+                          Emergency Triage & First Aid Education
+                        </td>
+                        <td className="px-3 py-2 align-top">
+                          GPT‑4 / GPT‑5 + Embeddings
+                        </td>
+                        <td className="px-3 py-2 align-top">
+                          <code className="rounded px-1 py-0.5 bg-muted text-xs">
+                            sentence-transformers/all-mpnet-base-v2
+                          </code>
+                        </td>
                       </tr>
                       <tr className="border-t">
-                        <td className="px-3 py-2 align-top">Government Schemes & Benefits Assistant</td>
-                        <td className="px-3 py-2 align-top">GPT‑4 / GPT‑5 + Embeddings</td>
-                        <td className="px-3 py-2 align-top"><code className="rounded px-1 py-0.5 bg-muted text-xs">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code></td>
+                        <td className="px-3 py-2 align-top">
+                          Government Schemes & Benefits Assistant
+                        </td>
+                        <td className="px-3 py-2 align-top">
+                          GPT‑4 / GPT‑5 + Embeddings
+                        </td>
+                        <td className="px-3 py-2 align-top">
+                          <code className="rounded px-1 py-0.5 bg-muted text-xs">
+                            sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+                          </code>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <p className="text-xs text-muted-foreground mt-3">
-                  Prototype uses free HF models where possible; production may switch to hosted OpenAI for latency and reliability.
+                  Prototype uses free HF models where possible; production may
+                  switch to hosted OpenAI for latency and reliability.
                 </p>
               </div>
             </Card>
@@ -627,9 +733,13 @@ export default function Technical() {
               <div className="space-y-4">
                 <div>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li className="text-sm">Frontend: React, Tailwind CSS, Framer Motion</li>
+                    <li className="text-sm">
+                      Frontend: React, Tailwind CSS, Framer Motion
+                    </li>
                     <li className="text-sm">Backend: Node.js, Express</li>
-                    <li className="text-sm">AI/ML: OpenAI + Hugging Face + PEARL CT pipeline</li>
+                    <li className="text-sm">
+                      AI/ML: OpenAI + Hugging Face + PEARL CT pipeline
+                    </li>
                     <li className="text-sm">Deployment: Netlify</li>
                   </ul>
                 </div>
@@ -645,10 +755,22 @@ export default function Technical() {
         <div className="mt-6 grid lg:grid-cols-1 gap-6">
           <Card title="Feasibility & Implementation Plan">
             <ul className="list-disc pl-5 space-y-1">
-              <li>Prototype phase: rely on free Hugging Face models and local inference where possible.</li>
-              <li>Production phase: migrate to OpenAI APIs for reliability, monitoring, and scale.</li>
-              <li>Low‑connectivity: offline‑first caching, small models on‑device, graceful degradation.</li>
-              <li>Privacy & Safety: PII minimization, rate limits, human‑in‑the‑loop escalation.</li>
+              <li>
+                Prototype phase: rely on free Hugging Face models and local
+                inference where possible.
+              </li>
+              <li>
+                Production phase: migrate to OpenAI APIs for reliability,
+                monitoring, and scale.
+              </li>
+              <li>
+                Low‑connectivity: offline‑first caching, small models on‑device,
+                graceful degradation.
+              </li>
+              <li>
+                Privacy & Safety: PII minimization, rate limits,
+                human‑in‑the‑loop escalation.
+              </li>
             </ul>
           </Card>
         </div>
@@ -657,16 +779,27 @@ export default function Technical() {
         <div className="mt-6 grid lg:grid-cols-2 gap-6">
           <Card title="Impact & Benefits">
             <ul className="list-disc pl-5 space-y-1">
-              <li>Potential to reduce ~58,000 annual snakebite deaths via faster first aid education.</li>
-              <li>900M+ rural residents as potential beneficiaries through localized guidance.</li>
-              <li>Reduced CT radiation exposure by encouraging low‑dose protocols and previews.</li>
+              <li>
+                Potential to reduce ~58,000 annual snakebite deaths via faster
+                first aid education.
+              </li>
+              <li>
+                900M+ rural residents as potential beneficiaries through
+                localized guidance.
+              </li>
+              <li>
+                Reduced CT radiation exposure by encouraging low‑dose protocols
+                and previews.
+              </li>
               <li>Faster lab follow‑up and awareness of health schemes.</li>
             </ul>
           </Card>
           <Card title="Future Scope">
             <ul className="list-disc pl-5 space-y-1">
               <li>Expand Indic language coverage and TTS voices.</li>
-              <li>New specialist modules (pediatrics, oncology) and decision aids.</li>
+              <li>
+                New specialist modules (pediatrics, oncology) and decision aids.
+              </li>
               <li>Integrations with hospitals/NGOs and referral networks.</li>
               <li>Offline‑first mobile app for rural deployments.</li>
             </ul>
@@ -677,15 +810,32 @@ export default function Technical() {
         <div className="mt-6 grid lg:grid-cols-1 gap-6">
           <Card title="References (IEEE style)">
             <ol className="list-decimal pl-5 space-y-1 text-sm">
-              <li>World Health Organization, "Global strategy on human resources for health: Workforce 2030," 2016. [Online]. Available: https://www.who.int/hrh/resources/globstrathrh-2030/en/</li>
-              <li>P. Suraweera et al., "Trends in snakebite mortality in India from 2000 to 2019," eLife, 2020. [Online]. Available: https://elifesciences.org/articles/54076</li>
-              <li>World Bank, "Rural population (% of total population) - India," 2022. [Online]. Available: https://data.worldbank.org/indicator/SP.RUR.TOTL.ZS?locations=IN</li>
-              <li>AI4Bharat, "IndicGPT and datasets," 2023. [Online]. Available: https://ai4bharat.org</li>
-              <li>OpenAI, "Whisper: Robust Speech Recognition," 2022. [Online]. Available: https://openai.com/research/whisper</li>
+              <li>
+                World Health Organization, "Global strategy on human resources
+                for health: Workforce 2030," 2016. [Online]. Available:
+                https://www.who.int/hrh/resources/globstrathrh-2030/en/
+              </li>
+              <li>
+                P. Suraweera et al., "Trends in snakebite mortality in India
+                from 2000 to 2019," eLife, 2020. [Online]. Available:
+                https://elifesciences.org/articles/54076
+              </li>
+              <li>
+                World Bank, "Rural population (% of total population) - India,"
+                2022. [Online]. Available:
+                https://data.worldbank.org/indicator/SP.RUR.TOTL.ZS?locations=IN
+              </li>
+              <li>
+                AI4Bharat, "IndicGPT and datasets," 2023. [Online]. Available:
+                https://ai4bharat.org
+              </li>
+              <li>
+                OpenAI, "Whisper: Robust Speech Recognition," 2022. [Online].
+                Available: https://openai.com/research/whisper
+              </li>
             </ol>
           </Card>
         </div>
-
       </div>
     </section>
   );
