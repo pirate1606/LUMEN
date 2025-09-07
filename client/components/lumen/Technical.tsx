@@ -427,7 +427,7 @@ export default function Technical() {
                 <div><div className="font-medium">4.2 AI Specialist Modules</div><p>Dermatology, radiology, cardiology decision aids.</p></div>
               </div>
               <div className="flex items-start gap-3"><Languages className="text-brand-blue" />
-                <div><div className="font-medium">4.3 Multilingual Voice���First Chatbot</div><p>Indic languages with TTS.</p></div>
+                <div><div className="font-medium">4.3 Multilingual Voice‑First Chatbot</div><p>Indic languages with TTS.</p></div>
               </div>
               <div className="flex items-start gap-3"><Activity className="text-brand-teal" />
                 <div><div className="font-medium">4.4 PEARL CT Reconstruction</div><p>Low‑dose previews with guidance.</p></div>
@@ -446,33 +446,6 @@ export default function Technical() {
         </div>
 
 
-        {/* Novelty */}
-        <div className="mt-10">
-          <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="Novelty & Differentiators">
-              <div className="space-y-2">
-                <p className="text-sm">
-                  <BookOpen className="inline mr-2" /> LUMEN differs from
-                  generic AI models in key ways—see{" "}
-                  <a href="/README.md" className="text-brand-blue underline">
-                    README.md
-                  </a>{" "}
-                  for the full overview.
-                </p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Multimodal, localized triage with voice‑first UX.</li>
-                  <li>Clinical‑aware PEARL imaging with uncertainty cues.</li>
-                  <li>
-                    Structured lab parsing with reference‑range evaluation.
-                  </li>
-                  <li>Grounded scheme retrieval via embeddings + vector DB.</li>
-                  <li>Safety‑first pipelines and human‑in‑the‑loop review.</li>
-                  <li>Extensible Node/Express + optional Python services.</li>
-                </ul>
-              </div>
-            </Card>
-          </div>
-        </div>
 
         {/* Role of OpenAI Tools */}
         <div id="openai" className="mt-6">
