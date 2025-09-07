@@ -20,7 +20,6 @@ import {
 } from "lucide-react";
 
 import ZoomableImage from "./ZoomableImage";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AnimatedBeam } from "./AnimatedBeam";
 import DevProfileCard from "./DevProfileCard";
 
@@ -265,7 +264,7 @@ export default function Technical() {
     <section id="technical" className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Cover Page (non-card) */}
-        <div className="mt-6 space-y-6">
+        <div id="cover" className="mt-6 space-y-6">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               LUMEN – Localized Unified Medical ENgine for Triage
@@ -275,6 +274,16 @@ export default function Technical() {
               CT reconstruction previews, lab report interpretation, and mapping
               citizens to government schemes.
             </p>
+            <div className="mt-4 flex items-center justify-center">
+              <a
+                href="https://cdn.builder.io/o/assets%2Fe8cc9787598e48f9b1b2ad55c5185cb9%2F571a64ddd41b44f284f7d10cabf79f52?alt=media&token=4b269a9a-f6c3-4192-b784-d6c79921c82c&apiKey=e8cc9787598e48f9b1b2ad55c5185cb9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cta"
+              >
+                View DOCX
+              </a>
+            </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
             <div className="rounded-lg border p-3 bg-secondary/40">
@@ -325,301 +334,219 @@ export default function Technical() {
           </div>
         </div>
 
-        <div className="mt-8 grid lg:grid-cols-1 gap-6">
-          <Card title="LUMEN ↔ OpenAI Feature Flow">
-            <BeamShowcase />
+        <div id="toc" className="mt-8 grid lg:grid-cols-1 gap-6">
+          <Card title="Table of Contents">
+            <ol className="list-decimal pl-5 space-y-1 text-sm">
+              <li>
+                <a href="#cover" className="text-brand-blue underline">
+                  Cover Page
+                </a>
+                <ol className="list-decimal pl-5 mt-1 space-y-1">
+                  <li>Team Name & Member Details</li>
+                  <li>Institution & Branch</li>
+                </ol>
+              </li>
+              <li>
+                <a href="#problem" className="text-brand-blue underline">
+                  Problem Statement
+                </a>
+              </li>
+              <li>
+                <a href="#solution" className="text-brand-blue underline">
+                  Proposed Solution
+                </a>
+                <ol className="list-decimal pl-5 mt-1 space-y-1">
+                  <li>Overview of Features</li>
+                  <li>Interactive Architecture Diagram</li>
+                </ol>
+              </li>
+              <li>
+                <a href="#features" className="text-brand-blue underline">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#openai" className="text-brand-blue underline">
+                  Role of OpenAI Tools
+                </a>
+              </li>
+              <li>
+                <a href="#techstack" className="text-brand-blue underline">
+                  Prototype Phase Tech Stack
+                </a>
+              </li>
+              <li>
+                <a href="#feasibility" className="text-brand-blue underline">
+                  Feasibility
+                </a>
+              </li>
+              <li>
+                <a href="#novelty" className="text-brand-blue underline">
+                  Novelty
+                </a>
+              </li>
+              <li>
+                <a href="#impact" className="text-brand-blue underline">
+                  Impact & Benefits
+                </a>
+              </li>
+              <li>
+                <a href="#future" className="text-brand-blue underline">
+                  Future Scope
+                </a>
+              </li>
+              <li>
+                <a href="#references" className="text-brand-blue underline">
+                  References (IEEE)
+                </a>
+              </li>
+            </ol>
           </Card>
         </div>
 
-        {/* Problem + Key Features */}
-        <div className="mt-10 grid lg:grid-cols-2 gap-6">
+        {/* Problem Statement */}
+        <div id="problem" className="mt-10 grid lg:grid-cols-1 gap-6">
           <Card title="Problem Statement">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>India faces uneven access to timely, quality healthcare.</li>
-              <li>
-                Rural populations (~65%) have limited primary and specialist
-                care.
-              </li>
-              <li>
-                Doctor density is ~20.6 per 10,000 versus WHO's 44.5 benchmark.
-              </li>
-              <li>
-                Preventable emergencies (e.g., ~58,000 snakebite deaths
-                annually) persist due to delayed triage and guidance.
-              </li>
-              <li>
-                CT overuse risks and lab follow-up delays affect outcomes.
-              </li>
-              <li>Low awareness of government health schemes limits uptake.</li>
-            </ul>
-            <p>
-              LUMEN aims to bridge these gaps with localized, multimodal
-              guidance and structured outputs that are easy to act on.
-            </p>
-          </Card>
-
-          <Card title="Key Features">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>
-                Symptoms-based triage with severity bands (green/yellow/red) and
-                next steps.
-              </li>
-              <li>
-                AI specialist modules (dermatology, radiology, cardiology) for
-                contextual guidance.
-              </li>
-              <li>
-                PEARL-inspired CT reconstruction preview for lower dose, clearer
-                images.
-              </li>
-              <li>
-                Lab report analyzer that extracts values, flags risks, and
-                suggests follow-up.
-              </li>
-              <li>
-                Government schemes assistant that checks eligibility and steps.
-              </li>
-              <li>
-                Emergency education tiles with audio guidance for first aid.
-              </li>
-              <li>Multi-language UX for accessibility across India.</li>
-            </ul>
-          </Card>
-        </div>
-
-        {/* Proposed Solution / Architecture */}
-        <div className="mt-6 grid lg:grid-cols-1 gap-6">
-          <Card title="Proposed Solution – Architecture (Interactive)">
-            <div className="space-y-3">
+            <div className="space-y-2">
+              <div className="font-medium">2.1 Healthcare Gaps in India</div>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  India faces uneven access to timely, quality healthcare.
+                </li>
+                <li>
+                  Rural populations (~65%) have limited primary and specialist
+                  care.
+                </li>
+              </ul>
+              <div className="font-medium mt-2">2.2 Statistics & Citations</div>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Doctor density is ~20.6 per 10,000 vs WHO 44.5 benchmark.
+                </li>
+                <li>
+                  ~58,000 snakebite deaths annually due to delayed triage.
+                </li>
+              </ul>
+              <div className="font-medium mt-2">
+                2.3 Impact on Rural and Semi-Urban Populations
+              </div>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  CT overuse risks and lab follow‑up delays affect outcomes.
+                </li>
+                <li>
+                  Low awareness of government health schemes limits uptake.
+                </li>
+              </ul>
               <p>
-                High-level diagram exported from Eraser. Use the controls to
-                zoom and pan.
-              </p>
-              <Tabs defaultValue="d1" className="w-full">
-                <TabsList className="bg-secondary rounded-lg p-1">
-                  <TabsTrigger
-                    value="d1"
-                    className="rounded-md data-[state=active]:bg-white data-[state=active]:shadow"
-                  >
-                    Diagram 1
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="d2"
-                    className="rounded-md data-[state=active]:bg-white data-[state=active]:shadow"
-                  >
-                    Diagram 2
-                  </TabsTrigger>
-                </TabsList>
-                <TabsContent value="d1" className="mt-3">
-                  <ZoomableImage
-                    src="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2F386c959d2e0945409ec9e98dd27c0526?format=webp&width=2000"
-                    alt="LUMEN system architecture (Eraser export)"
-                  />
-                </TabsContent>
-                <TabsContent value="d2" className="mt-3">
-                  <ZoomableImage
-                    src="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2F4f9ef3ba46934b92935a7f7fbac88080?format=webp&width=2000"
-                    alt="LUMEN system architecture zoomed blocks (Eraser export)"
-                  />
-                </TabsContent>
-              </Tabs>
-              <p className="text-xs">
-                Diagrams are conceptual and not final; implementation may
-                evolve.
+                LUMEN bridges these gaps with localized, multimodal guidance and
+                structured outputs.
               </p>
             </div>
           </Card>
         </div>
 
-        {/* Normal vs Differentiator Features */}
-        <div className="mt-10 grid lg:grid-cols-2 gap-6">
-          <Card title="Normal Features">
-            <div className="grid gap-3">
+        {/* Proposed Solution – Overview */}
+        <div id="solution" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="Proposed Solution – Overview of Features">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Symptoms‑based triage with severity bands and next steps.</li>
+              <li>
+                AI specialist modules (dermatology, radiology, cardiology).
+              </li>
+              <li>Multilingual, voice‑first chatbot.</li>
+              <li>PEARL CT reconstruction previews.</li>
+              <li>Lab report analyzer with follow‑up generation.</li>
+              <li>Government schemes & benefits assistant.</li>
+              <li>Preliminary triage & emergency education.</li>
+            </ul>
+          </Card>
+        </div>
+
+        {/* Proposed Solution – Interactive Architecture Diagram */}
+        <div id="architecture" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="Proposed Solution – Interactive Architecture Diagram">
+            <div className="space-y-3">
+              <p>High‑level architecture for LUMEN.</p>
+              <ZoomableImage
+                src="https://cdn.builder.io/api/v1/image/assets%2Fe8cc9787598e48f9b1b2ad55c5185cb9%2Fad244af8291d4e11bb71aab855e6e750?format=webp&width=800"
+                alt="LUMEN System Architecture"
+              />
+            </div>
+          </Card>
+        </div>
+
+        {/* Features */}
+        <div id="features" className="mt-10 grid lg:grid-cols-1 gap-6">
+          <Card title="Features">
+            <div className="grid sm:grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
                 <Stethoscope className="text-brand-blue" />
                 <div>
                   <div className="font-medium">
-                    Symptoms-Based Diagnosis & Guidance
+                    4.1 Symptoms‑Based Diagnosis & Guidance
                   </div>
-                  <p>
-                    Collect symptoms, compute severity bands, and offer clear
-                    next steps.
-                  </p>
+                  <p>Severity bands with clear next steps.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Cpu className="text-brand-blue" />
                 <div>
-                  <div className="font-medium">AI Specialist Modules</div>
-                  <p>
-                    Dermatology, radiology, cardiology reasoning with tools and
-                    checklists.
-                  </p>
+                  <div className="font-medium">4.2 AI Specialist Modules</div>
+                  <p>Dermatology, radiology, cardiology decision aids.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Languages className="text-brand-blue" />
                 <div>
-                  <div className="font-medium">Multilingual Chatbot</div>
-                  <p>
-                    Indic languages with voice-first UX; English fallback where
-                    needed.
-                  </p>
+                  <div className="font-medium">
+                    4.3 Multilingual Voice‑First Chatbot
+                  </div>
+                  <p>Indic languages with TTS.</p>
                 </div>
               </div>
-            </div>
-          </Card>
-
-          <Card title="Unique Differentiator Features">
-            <div className="grid gap-3">
               <div className="flex items-start gap-3">
                 <Activity className="text-brand-teal" />
                 <div>
-                  <div className="font-medium">PEARL CT Reconstruction</div>
-                  <p>
-                    Low‑dose reconstruction previews with uncertainty cues and
-                    dose notes.
-                  </p>
+                  <div className="font-medium">4.4 PEARL CT Reconstruction</div>
+                  <p>Low‑dose previews with guidance.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <FlaskConical className="text-brand-teal" />
                 <div>
                   <div className="font-medium">
-                    Lab Report Analyzer & Follow‑Up Generator
+                    4.5 Lab Report Analyzer & Follow‑Up Generator
                   </div>
-                  <p>
-                    OCR + reference ranges, flags, and structured follow‑ups
-                    users can act on.
-                  </p>
+                  <p>OCR, reference ranges, actionable follow‑ups.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Landmark className="text-brand-teal" />
                 <div>
                   <div className="font-medium">
-                    Government Schemes & Benefits Assistant
+                    4.6 Government Schemes & Benefits Assistant
                   </div>
-                  <p>
-                    Retrieval‑grounded matching to central/state schemes with
-                    eligibility steps.
-                  </p>
+                  <p>Eligibility checks via embeddings + vector DB.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <BadgeAlert className="text-cta" />
                 <div>
                   <div className="font-medium">
-                    Preliminary Triage & Emergency Education
+                    4.7 Preliminary Triage & Emergency Education
                   </div>
-                  <p>
-                    Audio‑guided first aid tiles for high‑impact emergencies
-                    like snakebite.
-                  </p>
+                  <p>Audio‑guided first aid tiles.</p>
                 </div>
               </div>
             </div>
           </Card>
         </div>
 
-        {/* System Design / Workflows */}
-        <div className="mt-6 grid lg:grid-cols-2 gap-6">
-          <Card title="System Design Workflow">
-            <div className="space-y-3">
-              <div className="font-medium flex items-center gap-2">
-                <Workflow className="text-brand-teal" /> Module Interactions
-              </div>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  Client → API Gateway: validation, PII minimization, safety
-                  filters.
-                </li>
-                <li>
-                  Router → Tools: vector search, calculators, retrieval, OCR.
-                </li>
-                <li>
-                  LLM reasoning → Structured outputs (JSON) → Localization &
-                  TTS.
-                </li>
-                <li>
-                  Observability: audit logs, red‑team prompts, feedback loop.
-                </li>
-              </ul>
-            </div>
-          </Card>
-          <Card title="Core Workflows / Pipelines">
-            <div className="space-y-3">
-              <div>
-                <div className="font-medium flex items-center gap-2">
-                  <Workflow className="text-brand-teal" /> Symptom Triage
-                </div>
-                <ol className="list-decimal pl-5 space-y-1 mt-1">
-                  <li>Collect text/audio/image with locale + consent.</li>
-                  <li>Gateway checks; anonymize identifiers.</li>
-                  <li>Reasoning + tools; compute severity and red flags.</li>
-                  <li>Return structured plan + localization + optional TTS.</li>
-                </ol>
-              </div>
-              <div>
-                <div className="font-medium flex items-center gap-2">
-                  <Cpu className="text-brand-blue" /> CT Reconstruction
-                  (PEARL‑inspired)
-                </div>
-                <ol className="list-decimal pl-5 space-y-1 mt-1">
-                  <li>Upload DICOM → pre‑processing.</li>
-                  <li>Low‑dose reconstruction → enhanced slices/volume.</li>
-                  <li>Viewer renders previews; export anonymized summaries.</li>
-                  <li>
-                    Non‑diagnostic disclaimer and radiation notes surfaced.
-                  </li>
-                </ol>
-              </div>
-              <div>
-                <div className="font-medium flex items-center gap-2">
-                  <Shield className="text-cta" /> Safety & Privacy
-                </div>
-                <ul className="list-disc pl-5 space-y-1 mt-1">
-                  <li>PII minimization, content filters, rate limiting.</li>
-                  <li>Human‑in‑the‑loop escalation for high‑risk outputs.</li>
-                  <li>Audit logs and red‑teaming for continuous evaluation.</li>
-                </ul>
-              </div>
-            </div>
-          </Card>
-        </div>
-
-        {/* Novelty */}
-        <div className="mt-10">
+        {/* Role of OpenAI Tools */}
+        <div id="openai" className="mt-6">
           <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="Novelty & Differentiators">
-              <div className="space-y-2">
-                <p className="text-sm">
-                  <BookOpen className="inline mr-2" /> LUMEN differs from
-                  generic AI models in key ways—see{" "}
-                  <a href="/README.md" className="text-brand-blue underline">
-                    README.md
-                  </a>{" "}
-                  for the full overview.
-                </p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Multimodal, localized triage with voice‑first UX.</li>
-                  <li>Clinical‑aware PEARL imaging with uncertainty cues.</li>
-                  <li>
-                    Structured lab parsing with reference‑range evaluation.
-                  </li>
-                  <li>Grounded scheme retrieval via embeddings + vector DB.</li>
-                  <li>Safety‑first pipelines and human‑in‑the‑loop review.</li>
-                  <li>Extensible Node/Express + optional Python services.</li>
-                </ul>
-              </div>
-            </Card>
-          </div>
-        </div>
-
-        {/* Role of AI / OpenAI Tools */}
-        <div className="mt-6">
-          <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="Role of AI / OpenAI Tools">
+            <Card title="Role of OpenAI Tools">
               <div className="p-2">
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm table-auto">
@@ -727,9 +654,9 @@ export default function Technical() {
         </div>
 
         {/* Tech Stack */}
-        <div className="mt-6">
+        <div id="techstack" className="mt-6">
           <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="Tech Stack">
+            <Card title="Prototype Phase Tech Stack">
               <div className="space-y-4">
                 <div>
                   <ul className="list-disc pl-5 space-y-2">
@@ -751,9 +678,9 @@ export default function Technical() {
           </div>
         </div>
 
-        {/* Feasibility & Implementation */}
-        <div className="mt-6 grid lg:grid-cols-1 gap-6">
-          <Card title="Feasibility & Implementation Plan">
+        {/* Feasibility */}
+        <div id="feasibility" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="Feasibility">
             <ul className="list-disc pl-5 space-y-1">
               <li>
                 Prototype phase: rely on free Hugging Face models and local
@@ -775,8 +702,28 @@ export default function Technical() {
           </Card>
         </div>
 
+        {/* Novelty */}
+        <div id="novelty" className="mt-10">
+          <div className="grid lg:grid-cols-1 gap-6">
+            <Card title="Novelty">
+              <div className="space-y-2">
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Multimodal, localized triage with voice‑first UX.</li>
+                  <li>Clinical‑aware PEARL imaging with uncertainty cues.</li>
+                  <li>
+                    Structured lab parsing with reference‑range evaluation.
+                  </li>
+                  <li>Grounded scheme retrieval via embeddings + vector DB.</li>
+                  <li>Safety‑first pipelines and human‑in‑the‑loop review.</li>
+                  <li>Extensible Node/Express + optional Python services.</li>
+                </ul>
+              </div>
+            </Card>
+          </div>
+        </div>
+
         {/* Impact & Benefits */}
-        <div className="mt-6 grid lg:grid-cols-2 gap-6">
+        <div id="impact" className="mt-6 grid lg:grid-cols-2 gap-6">
           <Card title="Impact & Benefits">
             <ul className="list-disc pl-5 space-y-1">
               <li>
@@ -795,6 +742,7 @@ export default function Technical() {
             </ul>
           </Card>
           <Card title="Future Scope">
+            <div id="future" />
             <ul className="list-disc pl-5 space-y-1">
               <li>Expand Indic language coverage and TTS voices.</li>
               <li>
@@ -807,8 +755,8 @@ export default function Technical() {
         </div>
 
         {/* References */}
-        <div className="mt-6 grid lg:grid-cols-1 gap-6">
-          <Card title="References (IEEE style)">
+        <div id="references" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="References (IEEE Format)">
             <ol className="list-decimal pl-5 space-y-1 text-sm">
               <li>
                 World Health Organization, "Global strategy on human resources
