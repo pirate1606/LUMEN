@@ -148,25 +148,15 @@ function TechStackGrid() {
     { slug: "huggingface", label: "Hugging Face", color: "FF6A00" },
     { slug: "react", label: "React", color: "61DAFB" },
     { slug: "tailwindcss", label: "Tailwind CSS", color: "06B6D4" },
-
     { slug: "framer", label: "Framer Motion", color: "0055FF" },
     { slug: "nodedotjs", label: "Node.js", color: "339933" },
     { slug: "express", label: "Express", color: "000000" },
     { slug: "netlify", label: "Netlify", color: "00C7B4" },
-
-    { slug: "vercel", label: "Vercel", color: "000000" },
-    { slug: "firebase", label: "Firebase", color: "FFCA28" },
-    { slug: "supabase", label: "Supabase", color: "3ECF8E" },
-    { slug: "docker", label: "Docker", color: "2496ED" },
-
     { slug: "github", label: "GitHub", color: "181717" },
-    { slug: "figma", label: "Figma", color: "F24E1E" },
-    { slug: "postgresql", label: "PostgreSQL", color: "336791" },
-    { slug: "railway", label: "Railway", color: "000000" },
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4 w-full">
+    <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 w-full">
       {techs.map((t) => (
         <div
           key={t.slug}
