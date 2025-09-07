@@ -12,6 +12,11 @@ import {
   Image as ImageIcon,
   Upload,
   BadgeAlert,
+  Stethoscope,
+  Languages,
+  Landmark,
+  FlaskConical,
+  Activity,
 } from "lucide-react";
 
 import ZoomableImage from "./ZoomableImage";
@@ -143,25 +148,15 @@ function TechStackGrid() {
     { slug: "huggingface", label: "Hugging Face", color: "FF6A00" },
     { slug: "react", label: "React", color: "61DAFB" },
     { slug: "tailwindcss", label: "Tailwind CSS", color: "06B6D4" },
-
     { slug: "framer", label: "Framer Motion", color: "0055FF" },
     { slug: "nodedotjs", label: "Node.js", color: "339933" },
     { slug: "express", label: "Express", color: "000000" },
     { slug: "netlify", label: "Netlify", color: "00C7B4" },
-
-    { slug: "vercel", label: "Vercel", color: "000000" },
-    { slug: "firebase", label: "Firebase", color: "FFCA28" },
-    { slug: "supabase", label: "Supabase", color: "3ECF8E" },
-    { slug: "docker", label: "Docker", color: "2496ED" },
-
     { slug: "github", label: "GitHub", color: "181717" },
-    { slug: "figma", label: "Figma", color: "F24E1E" },
-    { slug: "postgresql", label: "PostgreSQL", color: "336791" },
-    { slug: "railway", label: "Railway", color: "000000" },
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4 w-full">
+    <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 w-full">
       {techs.map((t) => (
         <div
           key={t.slug}
@@ -269,12 +264,74 @@ export default function Technical() {
   return (
     <section id="technical" className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mt-6 grid lg:grid-cols-1 gap-6">
+        {/* Cover Page (non-card) */}
+        <div className="mt-6 space-y-6">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              LUMEN – Localized Unified Medical ENgine for Triage
+            </h2>
+            <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">
+              Unified assistant for preliminary triage, diagnostics explanation,
+              CT reconstruction previews, lab report interpretation, and mapping
+              citizens to government schemes.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            <div className="rounded-lg border p-3 bg-secondary/40">
+              <div className="text-xs text-muted-foreground">Institution</div>
+              <div className="font-medium">
+                Vishwakarma Institute of Technology, Pune
+              </div>
+              <div className="text-sm">Department of Computer Engineering</div>
+            </div>
+            <div className="rounded-lg border p-3 bg-secondary/40">
+              <div className="text-xs text-muted-foreground">Team</div>
+              <div className="font-medium">Team LUMEN</div>
+              <div className="text-sm">
+                AI/ML • Frontend • Backend • Research
+              </div>
+            </div>
+          </div>
+          <div className="relative flex justify-center w-full overflow-x-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1600px] px-6 justify-items-center">
+              <DevProfileCard
+                name="Sanchit"
+                role="Full Stack Developer"
+                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2F4587d99ad8074e819191cef9f9a8a2c7?format=webp&width=800"
+                github="https://github.com/sanchit1606"
+                linkedin="https://www.linkedin.com/in/sanchit1606/"
+              />
+              <DevProfileCard
+                name="Priyal"
+                role="AI/ML Engineer"
+                github="https://github.com/priyal-username"
+                linkedin="https://www.linkedin.com/in/priyal-profile/"
+              />
+              <DevProfileCard
+                name="Paras"
+                role="Backend Developer"
+                photo="https://cdn.builder.io/api/v1/image/assets%2Fe15e28af565249a28e9186f98d17e5d6%2F724f568f937d459e956850b221bb91ac?format=webp&width=800"
+                github="https://github.com/paraspatil11"
+                linkedin="https://linkedin.com/in/ParasPatil"
+              />
+              <DevProfileCard
+                name="Kshitij"
+                role="Frontend Developer"
+                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2Fad5f0becc276472fbcdb59aafec6d377?format=webp&width=800"
+                github="https://github.com/okshitij"
+                linkedin="https://www.linkedin.com/in/kshitij-kalrao/"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 grid lg:grid-cols-1 gap-6">
           <Card title="LUMEN ↔ OpenAI Feature Flow">
             <BeamShowcase />
           </Card>
         </div>
 
+        {/* Problem + Key Features */}
         <div className="mt-10 grid lg:grid-cols-2 gap-6">
           <Card title="Problem Statement">
             <ul className="list-disc pl-5 space-y-1">
@@ -290,12 +347,14 @@ export default function Technical() {
                 Preventable emergencies (e.g., ~58,000 snakebite deaths
                 annually) persist due to delayed triage and guidance.
               </li>
+              <li>
+                CT overuse risks and lab follow-up delays affect outcomes.
+              </li>
+              <li>Low awareness of government health schemes limits uptake.</li>
             </ul>
             <p>
-              LUMEN addresses this with a unified assistant that triages
-              symptoms, explains diagnostics, reconstructs low-dose CT,
-              interprets lab reports, and maps people to government schemes—in
-              their language.
+              LUMEN aims to bridge these gaps with localized, multimodal
+              guidance and structured outputs that are easy to act on.
             </p>
           </Card>
 
@@ -328,8 +387,9 @@ export default function Technical() {
           </Card>
         </div>
 
+        {/* Proposed Solution / Architecture */}
         <div className="mt-6 grid lg:grid-cols-1 gap-6">
-          <Card title="System Architecture (WIP)">
+          <Card title="Proposed Solution – Architecture (Interactive)">
             <div className="space-y-3">
               <p>
                 High-level diagram exported from Eraser. Use the controls to
@@ -371,7 +431,122 @@ export default function Technical() {
           </Card>
         </div>
 
+        {/* Normal vs Differentiator Features */}
+        <div className="mt-10 grid lg:grid-cols-2 gap-6">
+          <Card title="Normal Features">
+            <div className="grid gap-3">
+              <div className="flex items-start gap-3">
+                <Stethoscope className="text-brand-blue" />
+                <div>
+                  <div className="font-medium">
+                    Symptoms-Based Diagnosis & Guidance
+                  </div>
+                  <p>
+                    Collect symptoms, compute severity bands, and offer clear
+                    next steps.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Cpu className="text-brand-blue" />
+                <div>
+                  <div className="font-medium">AI Specialist Modules</div>
+                  <p>
+                    Dermatology, radiology, cardiology reasoning with tools and
+                    checklists.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Languages className="text-brand-blue" />
+                <div>
+                  <div className="font-medium">Multilingual Chatbot</div>
+                  <p>
+                    Indic languages with voice-first UX; English fallback where
+                    needed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card title="Unique Differentiator Features">
+            <div className="grid gap-3">
+              <div className="flex items-start gap-3">
+                <Activity className="text-brand-teal" />
+                <div>
+                  <div className="font-medium">PEARL CT Reconstruction</div>
+                  <p>
+                    Low‑dose reconstruction previews with uncertainty cues and
+                    dose notes.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <FlaskConical className="text-brand-teal" />
+                <div>
+                  <div className="font-medium">
+                    Lab Report Analyzer & Follow‑Up Generator
+                  </div>
+                  <p>
+                    OCR + reference ranges, flags, and structured follow‑ups
+                    users can act on.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Landmark className="text-brand-teal" />
+                <div>
+                  <div className="font-medium">
+                    Government Schemes & Benefits Assistant
+                  </div>
+                  <p>
+                    Retrieval‑grounded matching to central/state schemes with
+                    eligibility steps.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <BadgeAlert className="text-cta" />
+                <div>
+                  <div className="font-medium">
+                    Preliminary Triage & Emergency Education
+                  </div>
+                  <p>
+                    Audio‑guided first aid tiles for high‑impact emergencies
+                    like snakebite.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* System Design / Workflows */}
         <div className="mt-6 grid lg:grid-cols-2 gap-6">
+          <Card title="System Design Workflow">
+            <div className="space-y-3">
+              <div className="font-medium flex items-center gap-2">
+                <Workflow className="text-brand-teal" /> Module Interactions
+              </div>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  Client → API Gateway: validation, PII minimization, safety
+                  filters.
+                </li>
+                <li>
+                  Router → Tools: vector search, calculators, retrieval, OCR.
+                </li>
+                <li>
+                  LLM reasoning → Structured outputs (JSON) → Localization &
+                  TTS.
+                </li>
+                <li>
+                  Observability: audit logs, red‑team prompts, feedback loop.
+                </li>
+              </ul>
+            </div>
+          </Card>
           <Card title="Core Workflows / Pipelines">
             <div className="space-y-3">
               <div>
@@ -379,43 +554,23 @@ export default function Technical() {
                   <Workflow className="text-brand-teal" /> Symptom Triage
                 </div>
                 <ol className="list-decimal pl-5 space-y-1 mt-1">
-                  <li>
-                    Client collects text/audio/image and metadata (locale,
-                    consent).
-                  </li>
-                  <li>
-                    API gateway validates, anonymizes, and performs safety
-                    checks.
-                  </li>
-                  <li>
-                    Router invokes GPT reasoning + tools (medical facts, vector
-                    search, calculators).
-                  </li>
-                  <li>
-                    Response is structured (severity, differential, next steps,
-                    red flags) and localized.
-                  </li>
+                  <li>Collect text/audio/image with locale + consent.</li>
+                  <li>Gateway checks; anonymize identifiers.</li>
+                  <li>Reasoning + tools; compute severity and red flags.</li>
+                  <li>Return structured plan + localization + optional TTS.</li>
                 </ol>
               </div>
               <div>
                 <div className="font-medium flex items-center gap-2">
                   <Cpu className="text-brand-blue" /> CT Reconstruction
-                  (PEARL-inspired)
+                  (PEARL‑inspired)
                 </div>
                 <ol className="list-decimal pl-5 space-y-1 mt-1">
+                  <li>Upload DICOM → pre‑processing.</li>
+                  <li>Low‑dose reconstruction → enhanced slices/volume.</li>
+                  <li>Viewer renders previews; export anonymized summaries.</li>
                   <li>
-                    Upload DICOM series — pre-processing (denoise, normalize).
-                  </li>
-                  <li>
-                    Low-dose reconstruction engine produces enhanced
-                    slices/volume.
-                  </li>
-                  <li>
-                    Viewer renders 3D/axial previews and exports summaries.
-                  </li>
-                  <li>
-                    Safety guardrails ensure non-diagnostic disclaimer and dose
-                    notes.
+                    Non‑diagnostic disclaimer and radiation notes surfaced.
                   </li>
                 </ol>
               </div>
@@ -424,22 +579,16 @@ export default function Technical() {
                   <Shield className="text-cta" /> Safety & Privacy
                 </div>
                 <ul className="list-disc pl-5 space-y-1 mt-1">
-                  <li>
-                    PII minimization, content filters, and rate limiting at
-                    gateway.
-                  </li>
-                  <li>Human-in-the-loop escalation for high-risk outputs.</li>
-                  <li>
-                    Audit logs and red-teaming prompts for continuous
-                    evaluation.
-                  </li>
+                  <li>PII minimization, content filters, rate limiting.</li>
+                  <li>Human‑in‑the‑loop escalation for high‑risk outputs.</li>
+                  <li>Audit logs and red‑teaming for continuous evaluation.</li>
                 </ul>
               </div>
             </div>
           </Card>
         </div>
 
-        {/* Team LUMEN Section */}
+        {/* Novelty */}
         <div className="mt-10">
           <div className="grid lg:grid-cols-1 gap-6">
             <Card title="Novelty & Differentiators">
@@ -450,86 +599,27 @@ export default function Technical() {
                   <a href="/README.md" className="text-brand-blue underline">
                     README.md
                   </a>{" "}
-                  for the full project overview.
+                  for the full overview.
                 </p>
                 <ul className="list-disc pl-5 space-y-1">
+                  <li>Multimodal, localized triage with voice‑first UX.</li>
+                  <li>Clinical‑aware PEARL imaging with uncertainty cues.</li>
                   <li>
-                    Multimodal, localized triage: voice/text/image inputs with
-                    regional language prompts and voice-first UX (not just
-                    English-only chat models).
+                    Structured lab parsing with reference‑range evaluation.
                   </li>
-                  <li>
-                    Clinical‑aware imaging (PEARL): geometry‑aware low‑dose CT
-                    reconstruction producing uncertainty maps for safer
-                    follow‑up decisions — beyond simple image captioning.
-                  </li>
-                  <li>
-                    Structured lab report parsing & evaluation: Donut/OCR +
-                    reference‑range comparison that returns fields, risk flags
-                    and suggested follow‑ups rather than freeform summaries.
-                  </li>
-                  <li>
-                    Grounded government scheme retrieval: embeddings + small
-                    vector DB to match user queries to state/national schemes
-                    with eligibility and helpline details.
-                  </li>
-                  <li>
-                    Safety‑first pipelines: PII minimization, content filters,
-                    human‑in‑the‑loop escalation for high‑risk outputs and
-                    explicit non‑diagnostic disclaimers.
-                  </li>
-                  <li>
-                    Extensible service mesh: lightweight Express endpoints and
-                    optional Python FastAPI services for heavier, on‑device or
-                    server‑side ML workloads.
-                  </li>
+                  <li>Grounded scheme retrieval via embeddings + vector DB.</li>
+                  <li>Safety‑first pipelines and human‑in‑the‑loop review.</li>
+                  <li>Extensible Node/Express + optional Python services.</li>
                 </ul>
-                <p className="text-xs text-muted-foreground">
-                  Icons and vectors across the site emphasize the operational
-                  differences (retrieval, uncertainty maps, structured fields).
-                  Refer to <code>/README.md</code> for citations and detailed
-                  comparisons.
-                </p>
               </div>
             </Card>
           </div>
         </div>
 
+        {/* Role of AI / OpenAI Tools */}
         <div className="mt-6">
           <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="Tech Stack Cloud">
-              <div className="space-y-4">
-                <div>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li className="text-sm">
-                      Main AI Platform: OpenAI (GPT-4, Whisper, DALL·E)
-                    </li>
-                    <li className="text-sm">
-                      Prototype / Alternatives: Hugging Face models (Indic‑GPT,
-                      Donut, BLIP)
-                    </li>
-                    <li className="text-sm">
-                      Student Innovation: PEARL CT (PerX2CT + XctDiff +
-                      SAX‑NeRF)
-                    </li>
-                    <li className="text-sm">
-                      Deployment & Data: Netlify / Render / Railway, Firebase /
-                      Supabase, Vector DB (FAISS / pgvector)
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="flex justify-center">
-                  <TechStackGrid />
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-
-        <div className="mt-6">
-          <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="OpenAI Models Used">
+            <Card title="Role of AI / OpenAI Tools">
               <div className="p-2">
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm table-auto">
@@ -547,76 +637,63 @@ export default function Technical() {
                         <td className="px-3 py-2 align-top">
                           Multilingual Chatbot (Core Conversations)
                         </td>
-                        <td className="px-3 py-2 align-top">
-                          GPT-4 / GPT-5 (chat completion)
-                        </td>
+                        <td className="px-3 py-2 align-top">GPT‑4 / GPT‑5</td>
                         <td className="px-3 py-2 align-top">
                           <code className="rounded px-1 py-0.5 bg-muted text-xs">
                             ai4bharat/indic-gpt
                           </code>
                         </td>
                       </tr>
-
                       <tr className="border-t">
                         <td className="px-3 py-2 align-top">
                           Voice Input (Speech → Text)
                         </td>
-                        <td className="px-3 py-2 align-top">Whisper (ASR)</td>
+                        <td className="px-3 py-2 align-top">Whisper</td>
                         <td className="px-3 py-2 align-top">
                           <code className="rounded px-1 py-0.5 bg-muted text-xs">
                             openai/whisper-small
                           </code>
                         </td>
                       </tr>
-
                       <tr className="border-t">
                         <td className="px-3 py-2 align-top">
                           Voice Output (Text → Speech)
                         </td>
-                        <td className="px-3 py-2 align-top">
-                          OpenAI TTS (text-to-speech)
-                        </td>
+                        <td className="px-3 py-2 align-top">OpenAI TTS</td>
                         <td className="px-3 py-2 align-top">
                           <code className="rounded px-1 py-0.5 bg-muted text-xs">
                             coqui/XTTS-v2
                           </code>
                         </td>
                       </tr>
-
                       <tr className="border-t">
                         <td className="px-3 py-2 align-top">
                           Lab Report Analyzer (OCR + Interpretation)
                         </td>
-                        <td className="px-3 py-2 align-top">
-                          GPT-4 / GPT-5 (explanation + follow-up)
-                        </td>
+                        <td className="px-3 py-2 align-top">GPT‑4 / GPT‑5</td>
                         <td className="px-3 py-2 align-top">
                           <code className="rounded px-1 py-0.5 bg-muted text-xs">
                             naver-clova-ix/donut-base-finetuned-docvqa
                           </code>
                         </td>
                       </tr>
-
                       <tr className="border-t">
                         <td className="px-3 py-2 align-top">
-                          Image-based Dermatology / Skin Issues
+                          Image‑based Dermatology / Skin Issues
                         </td>
-                        <td className="px-3 py-2 align-top">
-                          GPT-4-Vision (image understanding + summaries)
-                        </td>
+                        <td className="px-3 py-2 align-top">GPT‑4‑Vision</td>
                         <td className="px-3 py-2 align-top">
                           <code className="rounded px-1 py-0.5 bg-muted text-xs">
                             Salesforce/blip-image-captioning-base
                           </code>
                         </td>
                       </tr>
-
                       <tr className="border-t">
                         <td className="px-3 py-2 align-top">
                           Emergency Triage & First Aid Education
                         </td>
                         <td className="px-3 py-2 align-top">
-                          GPT-4 / GPT-5 (retrieval-grounded responses)
+                          GPT‑4 / GPT‑5 + Embeddings
                         </td>
                         <td className="px-3 py-2 align-top">
                           <code className="rounded px-1 py-0.5 bg-muted text-xs">
@@ -624,13 +701,12 @@ export default function Technical() {
                           </code>
                         </td>
                       </tr>
-
                       <tr className="border-t">
                         <td className="px-3 py-2 align-top">
                           Government Schemes & Benefits Assistant
                         </td>
                         <td className="px-3 py-2 align-top">
-                          GPT-4 / GPT-5 (retrieval-grounded responses)
+                          GPT‑4 / GPT‑5 + Embeddings
                         </td>
                         <td className="px-3 py-2 align-top">
                           <code className="rounded px-1 py-0.5 bg-muted text-xs">
@@ -641,50 +717,124 @@ export default function Technical() {
                     </tbody>
                   </table>
                 </div>
-
                 <p className="text-xs text-muted-foreground mt-3">
-                  Note: For the prototype phase we currently use free Hugging
-                  Face models (listed in the third column) where possible.
-                  Production may switch to commercial OpenAI models or hosted
-                  solutions for reliability and latency.
+                  Prototype uses free HF models where possible; production may
+                  switch to hosted OpenAI for latency and reliability.
                 </p>
               </div>
             </Card>
           </div>
         </div>
 
-        <div className="mt-20">
-          <div className="relative flex justify-center w-full overflow-x-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1600px] px-6 justify-items-center">
-              <DevProfileCard
-                name="Sanchit"
-                role="Full Stack Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2F4587d99ad8074e819191cef9f9a8a2c7?format=webp&width=800"
-                github="https://github.com/sanchit1606"
-                linkedin="https://www.linkedin.com/in/sanchit1606/"
-              />
-              <DevProfileCard
-                name="Priyal"
-                role="AI/ML Engineer"
-                github="https://github.com/priyal-username"
-                linkedin="https://www.linkedin.com/in/priyal-profile/"
-              />
-              <DevProfileCard
-                name="Paras"
-                role="Backend Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2Fe15e28af565249a28e9186f98d17e5d6%2F724f568f937d459e956850b221bb91ac?format=webp&width=800"
-                github="https://github.com/paraspatil11"
-                linkedin="https://linkedin.com/in/ParasPatil"
-              />
-              <DevProfileCard
-                name="Kshitij"
-                role="Frontend Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2Fad5f0becc276472fbcdb59aafec6d377?format=webp&width=800"
-                github="https://github.com/okshitij"
-                linkedin="https://www.linkedin.com/in/kshitij-kalrao/"
-              />
-            </div>
+        {/* Tech Stack */}
+        <div className="mt-6">
+          <div className="grid lg:grid-cols-1 gap-6">
+            <Card title="Tech Stack">
+              <div className="space-y-4">
+                <div>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li className="text-sm">
+                      Frontend: React, Tailwind CSS, Framer Motion
+                    </li>
+                    <li className="text-sm">Backend: Node.js, Express</li>
+                    <li className="text-sm">
+                      AI/ML: OpenAI + Hugging Face + PEARL CT pipeline
+                    </li>
+                    <li className="text-sm">Deployment: Netlify</li>
+                  </ul>
+                </div>
+                <div className="flex justify-center">
+                  <TechStackGrid />
+                </div>
+              </div>
+            </Card>
           </div>
+        </div>
+
+        {/* Feasibility & Implementation */}
+        <div className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="Feasibility & Implementation Plan">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                Prototype phase: rely on free Hugging Face models and local
+                inference where possible.
+              </li>
+              <li>
+                Production phase: migrate to OpenAI APIs for reliability,
+                monitoring, and scale.
+              </li>
+              <li>
+                Low‑connectivity: offline‑first caching, small models on‑device,
+                graceful degradation.
+              </li>
+              <li>
+                Privacy & Safety: PII minimization, rate limits,
+                human‑in‑the‑loop escalation.
+              </li>
+            </ul>
+          </Card>
+        </div>
+
+        {/* Impact & Benefits */}
+        <div className="mt-6 grid lg:grid-cols-2 gap-6">
+          <Card title="Impact & Benefits">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                Potential to reduce ~58,000 annual snakebite deaths via faster
+                first aid education.
+              </li>
+              <li>
+                900M+ rural residents as potential beneficiaries through
+                localized guidance.
+              </li>
+              <li>
+                Reduced CT radiation exposure by encouraging low‑dose protocols
+                and previews.
+              </li>
+              <li>Faster lab follow‑up and awareness of health schemes.</li>
+            </ul>
+          </Card>
+          <Card title="Future Scope">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Expand Indic language coverage and TTS voices.</li>
+              <li>
+                New specialist modules (pediatrics, oncology) and decision aids.
+              </li>
+              <li>Integrations with hospitals/NGOs and referral networks.</li>
+              <li>Offline‑first mobile app for rural deployments.</li>
+            </ul>
+          </Card>
+        </div>
+
+        {/* References */}
+        <div className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="References (IEEE style)">
+            <ol className="list-decimal pl-5 space-y-1 text-sm">
+              <li>
+                World Health Organization, "Global strategy on human resources
+                for health: Workforce 2030," 2016. [Online]. Available:
+                https://www.who.int/hrh/resources/globstrathrh-2030/en/
+              </li>
+              <li>
+                P. Suraweera et al., "Trends in snakebite mortality in India
+                from 2000 to 2019," eLife, 2020. [Online]. Available:
+                https://elifesciences.org/articles/54076
+              </li>
+              <li>
+                World Bank, "Rural population (% of total population) - India,"
+                2022. [Online]. Available:
+                https://data.worldbank.org/indicator/SP.RUR.TOTL.ZS?locations=IN
+              </li>
+              <li>
+                AI4Bharat, "IndicGPT and datasets," 2023. [Online]. Available:
+                https://ai4bharat.org
+              </li>
+              <li>
+                OpenAI, "Whisper: Robust Speech Recognition," 2022. [Online].
+                Available: https://openai.com/research/whisper
+              </li>
+            </ol>
+          </Card>
         </div>
       </div>
     </section>
