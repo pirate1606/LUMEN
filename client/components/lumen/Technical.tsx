@@ -416,162 +416,35 @@ export default function Technical() {
           </Card>
         </div>
 
-        {/* Normal vs Differentiator Features */}
-        <div className="mt-10 grid lg:grid-cols-2 gap-6">
-          <Card title="Normal Features">
-            <div className="grid gap-3">
-              <div className="flex items-start gap-3">
-                <Stethoscope className="text-brand-blue" />
-                <div>
-                  <div className="font-medium">
-                    Symptoms-Based Diagnosis & Guidance
-                  </div>
-                  <p>
-                    Collect symptoms, compute severity bands, and offer clear
-                    next steps.
-                  </p>
-                </div>
+        {/* Features */}
+        <div id="features" className="mt-10 grid lg:grid-cols-1 gap-6">
+          <Card title="Features">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="flex items-start gap-3"><Stethoscope className="text-brand-blue" />
+                <div><div className="font-medium">4.1 Symptoms‑Based Diagnosis & Guidance</div><p>Severity bands with clear next steps.</p></div>
               </div>
-              <div className="flex items-start gap-3">
-                <Cpu className="text-brand-blue" />
-                <div>
-                  <div className="font-medium">AI Specialist Modules</div>
-                  <p>
-                    Dermatology, radiology, cardiology reasoning with tools and
-                    checklists.
-                  </p>
-                </div>
+              <div className="flex items-start gap-3"><Cpu className="text-brand-blue" />
+                <div><div className="font-medium">4.2 AI Specialist Modules</div><p>Dermatology, radiology, cardiology decision aids.</p></div>
               </div>
-              <div className="flex items-start gap-3">
-                <Languages className="text-brand-blue" />
-                <div>
-                  <div className="font-medium">Multilingual Chatbot</div>
-                  <p>
-                    Indic languages with voice-first UX; English fallback where
-                    needed.
-                  </p>
-                </div>
+              <div className="flex items-start gap-3"><Languages className="text-brand-blue" />
+                <div><div className="font-medium">4.3 Multilingual Voice���First Chatbot</div><p>Indic languages with TTS.</p></div>
               </div>
-            </div>
-          </Card>
-
-          <Card title="Unique Differentiator Features">
-            <div className="grid gap-3">
-              <div className="flex items-start gap-3">
-                <Activity className="text-brand-teal" />
-                <div>
-                  <div className="font-medium">PEARL CT Reconstruction</div>
-                  <p>
-                    Low‑dose reconstruction previews with uncertainty cues and
-                    dose notes.
-                  </p>
-                </div>
+              <div className="flex items-start gap-3"><Activity className="text-brand-teal" />
+                <div><div className="font-medium">4.4 PEARL CT Reconstruction</div><p>Low‑dose previews with guidance.</p></div>
               </div>
-              <div className="flex items-start gap-3">
-                <FlaskConical className="text-brand-teal" />
-                <div>
-                  <div className="font-medium">
-                    Lab Report Analyzer & Follow‑Up Generator
-                  </div>
-                  <p>
-                    OCR + reference ranges, flags, and structured follow‑ups
-                    users can act on.
-                  </p>
-                </div>
+              <div className="flex items-start gap-3"><FlaskConical className="text-brand-teal" />
+                <div><div className="font-medium">4.5 Lab Report Analyzer & Follow‑Up Generator</div><p>OCR, reference ranges, actionable follow‑ups.</p></div>
               </div>
-              <div className="flex items-start gap-3">
-                <Landmark className="text-brand-teal" />
-                <div>
-                  <div className="font-medium">
-                    Government Schemes & Benefits Assistant
-                  </div>
-                  <p>
-                    Retrieval‑grounded matching to central/state schemes with
-                    eligibility steps.
-                  </p>
-                </div>
+              <div className="flex items-start gap-3"><Landmark className="text-brand-teal" />
+                <div><div className="font-medium">4.6 Government Schemes & Benefits Assistant</div><p>Eligibility checks via embeddings + vector DB.</p></div>
               </div>
-              <div className="flex items-start gap-3">
-                <BadgeAlert className="text-cta" />
-                <div>
-                  <div className="font-medium">
-                    Preliminary Triage & Emergency Education
-                  </div>
-                  <p>
-                    Audio‑guided first aid tiles for high‑impact emergencies
-                    like snakebite.
-                  </p>
-                </div>
+              <div className="flex items-start gap-3"><BadgeAlert className="text-cta" />
+                <div><div className="font-medium">4.7 Preliminary Triage & Emergency Education</div><p>Audio‑guided first aid tiles.</p></div>
               </div>
             </div>
           </Card>
         </div>
 
-        {/* System Design / Workflows */}
-        <div className="mt-6 grid lg:grid-cols-2 gap-6">
-          <Card title="System Design Workflow">
-            <div className="space-y-3">
-              <div className="font-medium flex items-center gap-2">
-                <Workflow className="text-brand-teal" /> Module Interactions
-              </div>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  Client → API Gateway: validation, PII minimization, safety
-                  filters.
-                </li>
-                <li>
-                  Router → Tools: vector search, calculators, retrieval, OCR.
-                </li>
-                <li>
-                  LLM reasoning → Structured outputs (JSON) → Localization &
-                  TTS.
-                </li>
-                <li>
-                  Observability: audit logs, red‑team prompts, feedback loop.
-                </li>
-              </ul>
-            </div>
-          </Card>
-          <Card title="Core Workflows / Pipelines">
-            <div className="space-y-3">
-              <div>
-                <div className="font-medium flex items-center gap-2">
-                  <Workflow className="text-brand-teal" /> Symptom Triage
-                </div>
-                <ol className="list-decimal pl-5 space-y-1 mt-1">
-                  <li>Collect text/audio/image with locale + consent.</li>
-                  <li>Gateway checks; anonymize identifiers.</li>
-                  <li>Reasoning + tools; compute severity and red flags.</li>
-                  <li>Return structured plan + localization + optional TTS.</li>
-                </ol>
-              </div>
-              <div>
-                <div className="font-medium flex items-center gap-2">
-                  <Cpu className="text-brand-blue" /> CT Reconstruction
-                  (PEARL‑inspired)
-                </div>
-                <ol className="list-decimal pl-5 space-y-1 mt-1">
-                  <li>Upload DICOM → pre‑processing.</li>
-                  <li>Low‑dose reconstruction → enhanced slices/volume.</li>
-                  <li>Viewer renders previews; export anonymized summaries.</li>
-                  <li>
-                    Non‑diagnostic disclaimer and radiation notes surfaced.
-                  </li>
-                </ol>
-              </div>
-              <div>
-                <div className="font-medium flex items-center gap-2">
-                  <Shield className="text-cta" /> Safety & Privacy
-                </div>
-                <ul className="list-disc pl-5 space-y-1 mt-1">
-                  <li>PII minimization, content filters, rate limiting.</li>
-                  <li>Human‑in‑the‑loop escalation for high‑risk outputs.</li>
-                  <li>Audit logs and red‑teaming for continuous evaluation.</li>
-                </ul>
-              </div>
-            </div>
-          </Card>
-        </div>
 
         {/* Novelty */}
         <div className="mt-10">
@@ -601,10 +474,10 @@ export default function Technical() {
           </div>
         </div>
 
-        {/* Role of AI / OpenAI Tools */}
-        <div className="mt-6">
+        {/* Role of OpenAI Tools */}
+        <div id="openai" className="mt-6">
           <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="Role of AI / OpenAI Tools">
+            <Card title="Role of OpenAI Tools">
               <div className="p-2">
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm table-auto">
@@ -712,9 +585,9 @@ export default function Technical() {
         </div>
 
         {/* Tech Stack */}
-        <div className="mt-6">
+        <div id="techstack" className="mt-6">
           <div className="grid lg:grid-cols-1 gap-6">
-            <Card title="Tech Stack">
+            <Card title="Prototype Phase Tech Stack">
               <div className="space-y-4">
                 <div>
                   <ul className="list-disc pl-5 space-y-2">
@@ -736,9 +609,9 @@ export default function Technical() {
           </div>
         </div>
 
-        {/* Feasibility & Implementation */}
-        <div className="mt-6 grid lg:grid-cols-1 gap-6">
-          <Card title="Feasibility & Implementation Plan">
+        {/* Feasibility */}
+        <div id="feasibility" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="Feasibility">
             <ul className="list-disc pl-5 space-y-1">
               <li>
                 Prototype phase: rely on free Hugging Face models and local
@@ -761,7 +634,7 @@ export default function Technical() {
         </div>
 
         {/* Impact & Benefits */}
-        <div className="mt-6 grid lg:grid-cols-2 gap-6">
+        <div id="impact" className="mt-6 grid lg:grid-cols-2 gap-6">
           <Card title="Impact & Benefits">
             <ul className="list-disc pl-5 space-y-1">
               <li>
@@ -779,7 +652,7 @@ export default function Technical() {
               <li>Faster lab follow‑up and awareness of health schemes.</li>
             </ul>
           </Card>
-          <Card title="Future Scope">
+          <Card title="Future Scope"><div id="future" />
             <ul className="list-disc pl-5 space-y-1">
               <li>Expand Indic language coverage and TTS voices.</li>
               <li>
@@ -792,8 +665,8 @@ export default function Technical() {
         </div>
 
         {/* References */}
-        <div className="mt-6 grid lg:grid-cols-1 gap-6">
-          <Card title="References (IEEE style)">
+        <div id="references" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="References (IEEE Format)">
             <ol className="list-decimal pl-5 space-y-1 text-sm">
               <li>
                 World Health Organization, "Global strategy on human resources
