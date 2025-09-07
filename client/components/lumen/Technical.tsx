@@ -606,6 +606,24 @@ export default function Technical() {
           </Card>
         </div>
 
+        {/* Novelty */}
+        <div id="novelty" className="mt-10">
+          <div className="grid lg:grid-cols-1 gap-6">
+            <Card title="Novelty">
+              <div className="space-y-2">
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Multimodal, localized triage with voice‑first UX.</li>
+                  <li>Clinical‑aware PEARL imaging with uncertainty cues.</li>
+                  <li>Structured lab parsing with reference‑range evaluation.</li>
+                  <li>Grounded scheme retrieval via embeddings + vector DB.</li>
+                  <li>Safety‑first pipelines and human‑in‑the‑loop review.</li>
+                  <li>Extensible Node/Express + optional Python services.</li>
+                </ul>
+              </div>
+            </Card>
+          </div>
+        </div>
+
         {/* Impact & Benefits */}
         <div id="impact" className="mt-6 grid lg:grid-cols-2 gap-6">
           <Card title="Impact & Benefits">
