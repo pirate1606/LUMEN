@@ -264,27 +264,61 @@ export default function Technical() {
   return (
     <section id="technical" className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Cover Page */}
-        <div className="grid lg:grid-cols-2 gap-6 mt-6">
-          <Card title="LUMEN – Localized Unified Medical ENgine for Triage">
-            <p>
-              A unified assistant for preliminary triage, diagnostics
-              explanation, CT reconstruction previews, lab report
-              interpretation, and mapping citizens to government schemes.
+        {/* Cover Page (non-card) */}
+        <div className="mt-6 space-y-6">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">LUMEN – Localized Unified Medical ENgine for Triage</h2>
+            <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">
+              Unified assistant for preliminary triage, diagnostics explanation, CT reconstruction previews,
+              lab report interpretation, and mapping citizens to government schemes.
             </p>
-            <div className="grid sm:grid-cols-2 gap-3">
-              <div className="rounded-lg border p-3 bg-secondary/40">
-                <div className="text-xs text-muted-foreground">Institution</div>
-                <div className="font-medium">Vishwakarma Institute of Technology, Pune</div>
-                <div className="text-sm">Department of Computer Engineering</div>
-              </div>
-              <div className="rounded-lg border p-3 bg-secondary/40">
-                <div className="text-xs text-muted-foreground">Team</div>
-                <div className="font-medium">Team LUMEN</div>
-                <div className="text-sm">AI/ML • Frontend • Backend • Research</div>
-              </div>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            <div className="rounded-lg border p-3 bg-secondary/40">
+              <div className="text-xs text-muted-foreground">Institution</div>
+              <div className="font-medium">Vishwakarma Institute of Technology, Pune</div>
+              <div className="text-sm">Department of Computer Engineering</div>
             </div>
-          </Card>
+            <div className="rounded-lg border p-3 bg-secondary/40">
+              <div className="text-xs text-muted-foreground">Team</div>
+              <div className="font-medium">Team LUMEN</div>
+              <div className="text-sm">AI/ML • Frontend • Backend • Research</div>
+            </div>
+          </div>
+          <div className="relative flex justify-center w-full overflow-x-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1600px] px-6 justify-items-center">
+              <DevProfileCard
+                name="Sanchit"
+                role="Full Stack Developer"
+                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2F4587d99ad8074e819191cef9f9a8a2c7?format=webp&width=800"
+                github="https://github.com/sanchit1606"
+                linkedin="https://www.linkedin.com/in/sanchit1606/"
+              />
+              <DevProfileCard
+                name="Priyal"
+                role="AI/ML Engineer"
+                github="https://github.com/priyal-username"
+                linkedin="https://www.linkedin.com/in/priyal-profile/"
+              />
+              <DevProfileCard
+                name="Paras"
+                role="Backend Developer"
+                photo="https://cdn.builder.io/api/v1/image/assets%2Fe15e28af565249a28e9186f98d17e5d6%2F724f568f937d459e956850b221bb91ac?format=webp&width=800"
+                github="https://github.com/paraspatil11"
+                linkedin="https://linkedin.com/in/ParasPatil"
+              />
+              <DevProfileCard
+                name="Kshitij"
+                role="Frontend Developer"
+                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2Fad5f0becc276472fbcdb59aafec6d377?format=webp&width=800"
+                github="https://github.com/okshitij"
+                linkedin="https://www.linkedin.com/in/kshitij-kalrao/"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 grid lg:grid-cols-1 gap-6">
           <Card title="LUMEN ↔ OpenAI Feature Flow">
             <BeamShowcase />
           </Card>
@@ -652,40 +686,6 @@ export default function Technical() {
           </Card>
         </div>
 
-        {/* Team */}
-        <div className="mt-10">
-          <div className="relative flex justify-center w-full overflow-x-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1600px] px-6 justify-items-center">
-              <DevProfileCard
-                name="Sanchit"
-                role="Full Stack Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2F4587d99ad8074e819191cef9f9a8a2c7?format=webp&width=800"
-                github="https://github.com/sanchit1606"
-                linkedin="https://www.linkedin.com/in/sanchit1606/"
-              />
-              <DevProfileCard
-                name="Priyal"
-                role="AI/ML Engineer"
-                github="https://github.com/priyal-username"
-                linkedin="https://www.linkedin.com/in/priyal-profile/"
-              />
-              <DevProfileCard
-                name="Paras"
-                role="Backend Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2Fe15e28af565249a28e9186f98d17e5d6%2F724f568f937d459e956850b221bb91ac?format=webp&width=800"
-                github="https://github.com/paraspatil11"
-                linkedin="https://linkedin.com/in/ParasPatil"
-              />
-              <DevProfileCard
-                name="Kshitij"
-                role="Frontend Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2Fad5f0becc276472fbcdb59aafec6d377?format=webp&width=800"
-                github="https://github.com/okshitij"
-                linkedin="https://www.linkedin.com/in/kshitij-kalrao/"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
