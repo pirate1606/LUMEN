@@ -274,6 +274,24 @@ export default function Technical() {
               CT reconstruction previews, lab report interpretation, and mapping
               citizens to government schemes.
             </p>
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <a
+                href="https://cdn.builder.io/o/assets%2Fe8cc9787598e48f9b1b2ad55c5185cb9%2F571a64ddd41b44f284f7d10cabf79f52?alt=media&token=4b269a9a-f6c3-4192-b784-d6c79921c82c&apiKey=e8cc9787598e48f9b1b2ad55c5185cb9"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-cta"
+              >
+                View Final Submission (DOCX)
+              </a>
+              <a
+                href="https://cdn.builder.io/o/assets%2Fe8cc9787598e48f9b1b2ad55c5185cb9%2F891fc9853b44433ea605685597e9648d?alt=media&token=073b8297-f1a8-4f9a-9548-8a8ffb1703aa&apiKey=e8cc9787598e48f9b1b2ad55c5185cb9"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-lg border border-input bg-background px-6 py-3 font-semibold shadow-sm hover:shadow-lg transition"
+              >
+                Read Markdown Version
+              </a>
+            </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
             <div className="rounded-lg border p-3 bg-secondary/40">
