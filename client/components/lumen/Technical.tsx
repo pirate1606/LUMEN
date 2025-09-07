@@ -291,45 +291,10 @@ export default function Technical() {
               <div className="font-medium">
                 Vishwakarma Institute of Technology, Pune
               </div>
-              <div className="text-sm">Department of Computer Engineering</div>
+              <div className="text-sm">Department of Computer Engineering & IT</div>
             </div>
             <div className="rounded-lg border p-3 bg-secondary/40">
-              <div className="text-xs text-muted-foreground">Team</div>
               <div className="font-medium">Team LUMEN</div>
-              <div className="text-sm">
-                AI/ML • Frontend • Backend • Research
-              </div>
-            </div>
-          </div>
-          <div className="relative flex justify-center w-full overflow-x-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1600px] px-6 justify-items-center">
-              <DevProfileCard
-                name="Sanchit"
-                role="Full Stack Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2F4587d99ad8074e819191cef9f9a8a2c7?format=webp&width=800"
-                github="https://github.com/sanchit1606"
-                linkedin="https://www.linkedin.com/in/sanchit1606/"
-              />
-              <DevProfileCard
-                name="Priyal"
-                role="AI/ML Engineer"
-                github="https://github.com/priyal-username"
-                linkedin="https://www.linkedin.com/in/priyal-profile/"
-              />
-              <DevProfileCard
-                name="Paras"
-                role="Backend Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2Fe15e28af565249a28e9186f98d17e5d6%2F724f568f937d459e956850b221bb91ac?format=webp&width=800"
-                github="https://github.com/paraspatil11"
-                linkedin="https://linkedin.com/in/ParasPatil"
-              />
-              <DevProfileCard
-                name="Kshitij"
-                role="Frontend Developer"
-                photo="https://cdn.builder.io/api/v1/image/assets%2F445519f4dc2147579ea6fb2243527f29%2Fad5f0becc276472fbcdb59aafec6d377?format=webp&width=800"
-                github="https://github.com/okshitij"
-                linkedin="https://www.linkedin.com/in/kshitij-kalrao/"
-              />
             </div>
           </div>
         </div>
@@ -341,10 +306,7 @@ export default function Technical() {
                 <a href="#cover" className="text-brand-blue underline">
                   Cover Page
                 </a>
-                <ol className="list-decimal pl-5 mt-1 space-y-1">
-                  <li>Team Name & Member Details</li>
-                  <li>Institution & Branch</li>
-                </ol>
+                <ol className="list-decimal pl-5 mt-1 space-y-1" />
               </li>
               <li>
                 <a href="#problem" className="text-brand-blue underline">
@@ -355,10 +317,7 @@ export default function Technical() {
                 <a href="#solution" className="text-brand-blue underline">
                   Proposed Solution
                 </a>
-                <ol className="list-decimal pl-5 mt-1 space-y-1">
-                  <li>Overview of Features</li>
-                  <li>Interactive Architecture Diagram</li>
-                </ol>
+                <ol className="list-decimal pl-5 mt-1 space-y-1" />
               </li>
               <li>
                 <a href="#features" className="text-brand-blue underline">
@@ -369,10 +328,7 @@ export default function Technical() {
                 <a href="#openai" className="text-brand-blue underline">
                   Role of OpenAI Tools
                 </a>
-                <ol className="list-decimal pl-5 mt-1 space-y-1">
-                  <li>OpenAI APIs Used</li>
-                  <li>Prototype Phase</li>
-                </ol>
+                <ol className="list-decimal pl-5 mt-1 space-y-1" />
               </li>
               <li>
                 <a href="#techstack" className="text-brand-blue underline">
@@ -806,7 +762,7 @@ export default function Technical() {
               <li>“Healthcare Access in Rural Communities in India,” Ballard Brief, 18‑Dec‑2024.</li>
               <li>A. P. Ugargol et al., “In search of a fix to the primary health care chasm in India,” PMC, 2023.</li>
               <li>A. Nair et al., “Workforce problems at rural public health‑centres in India,” Human Resources for Health, 2022.</li>
-              <li>W. Suraweera et al., “Trends in snakebite deaths in India from 2000 to 2019,�� eLife, 2020.</li>
+              <li>W. Suraweera et al., “Trends in snakebite deaths in India from 2000 to 2019,” eLife, 2020.</li>
               <li>“Snakebite,” Wikipedia, 2025.</li>
               <li>“India still struggles with rural doctor shortages,” ResearchGate/Axios, 2025.</li>
               <li>“Healthcare Access in Rural India,” docboxmed.com, 23‑Sep‑2024.</li>
