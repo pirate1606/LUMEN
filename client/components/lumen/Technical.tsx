@@ -264,7 +264,7 @@ export default function Technical() {
     <section id="technical" className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Cover Page (non-card) */}
-        <div className="mt-6 space-y-6">
+        <div id="cover" className="mt-6 space-y-6">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               LUMEN – Localized Unified Medical ENgine for Triage
@@ -274,22 +274,14 @@ export default function Technical() {
               CT reconstruction previews, lab report interpretation, and mapping
               citizens to government schemes.
             </p>
-            <div className="mt-4 flex items-center justify-center gap-3">
+            <div className="mt-4 flex items-center justify-center">
               <a
                 href="https://cdn.builder.io/o/assets%2Fe8cc9787598e48f9b1b2ad55c5185cb9%2F571a64ddd41b44f284f7d10cabf79f52?alt=media&token=4b269a9a-f6c3-4192-b784-d6c79921c82c&apiKey=e8cc9787598e48f9b1b2ad55c5185cb9"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="btn-cta"
               >
-                View Final Submission (DOCX)
-              </a>
-              <a
-                href="https://cdn.builder.io/o/assets%2Fe8cc9787598e48f9b1b2ad55c5185cb9%2F891fc9853b44433ea605685597e9648d?alt=media&token=073b8297-f1a8-4f9a-9548-8a8ffb1703aa&apiKey=e8cc9787598e48f9b1b2ad55c5185cb9"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border border-input bg-background px-6 py-3 font-semibold shadow-sm hover:shadow-lg transition"
-              >
-                Read Markdown Version
+                View DOCX
               </a>
             </div>
           </div>
@@ -342,71 +334,78 @@ export default function Technical() {
           </div>
         </div>
 
-        <div className="mt-8 grid lg:grid-cols-1 gap-6">
-          <Card title="LUMEN ↔ OpenAI Feature Flow">
-            <BeamShowcase />
+        <div id="toc" className="mt-8 grid lg:grid-cols-1 gap-6">
+          <Card title="Table of Contents">
+            <ol className="list-decimal pl-5 space-y-1 text-sm">
+              <li><a href="#cover" className="text-brand-blue underline">Cover Page</a>
+                <ol className="list-decimal pl-5 mt-1 space-y-1">
+                  <li>Team Name & Member Details</li>
+                  <li>Institution & Branch</li>
+                </ol>
+              </li>
+              <li><a href="#problem" className="text-brand-blue underline">Problem Statement</a></li>
+              <li><a href="#solution" className="text-brand-blue underline">Proposed Solution</a>
+                <ol className="list-decimal pl-5 mt-1 space-y-1">
+                  <li>Overview of Features</li>
+                  <li>Interactive Architecture Diagram</li>
+                </ol>
+              </li>
+              <li><a href="#features" className="text-brand-blue underline">Features</a></li>
+              <li><a href="#openai" className="text-brand-blue underline">Role of OpenAI Tools</a></li>
+              <li><a href="#techstack" className="text-brand-blue underline">Prototype Phase Tech Stack</a></li>
+              <li><a href="#feasibility" className="text-brand-blue underline">Feasibility</a></li>
+              <li><a href="#novelty" className="text-brand-blue underline">Novelty</a></li>
+              <li><a href="#impact" className="text-brand-blue underline">Impact & Benefits</a></li>
+              <li><a href="#future" className="text-brand-blue underline">Future Scope</a></li>
+              <li><a href="#references" className="text-brand-blue underline">References (IEEE)</a></li>
+            </ol>
           </Card>
         </div>
 
-        {/* Problem + Key Features */}
-        <div className="mt-10 grid lg:grid-cols-2 gap-6">
+        {/* Problem Statement */}
+        <div id="problem" className="mt-10 grid lg:grid-cols-1 gap-6">
           <Card title="Problem Statement">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>India faces uneven access to timely, quality healthcare.</li>
-              <li>
-                Rural populations (~65%) have limited primary and specialist
-                care.
-              </li>
-              <li>
-                Doctor density is ~20.6 per 10,000 versus WHO's 44.5 benchmark.
-              </li>
-              <li>
-                Preventable emergencies (e.g., ~58,000 snakebite deaths
-                annually) persist due to delayed triage and guidance.
-              </li>
-              <li>
-                CT overuse risks and lab follow-up delays affect outcomes.
-              </li>
-              <li>Low awareness of government health schemes limits uptake.</li>
-            </ul>
-            <p>
-              LUMEN aims to bridge these gaps with localized, multimodal
-              guidance and structured outputs that are easy to act on.
-            </p>
+            <div className="space-y-2">
+              <div className="font-medium">2.1 Healthcare Gaps in India</div>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>India faces uneven access to timely, quality healthcare.</li>
+                <li>Rural populations (~65%) have limited primary and specialist care.</li>
+              </ul>
+              <div className="font-medium mt-2">2.2 Statistics & Citations</div>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Doctor density is ~20.6 per 10,000 vs WHO 44.5 benchmark.</li>
+                <li>~58,000 snakebite deaths annually due to delayed triage.</li>
+              </ul>
+              <div className="font-medium mt-2">2.3 Impact on Rural and Semi-Urban Populations</div>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>CT overuse risks and lab follow‑up delays affect outcomes.</li>
+                <li>Low awareness of government health schemes limits uptake.</li>
+              </ul>
+              <p>
+                LUMEN bridges these gaps with localized, multimodal guidance and structured outputs.
+              </p>
+            </div>
           </Card>
+        </div>
 
-          <Card title="Key Features">
+        {/* Proposed Solution – Overview */}
+        <div id="solution" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="Proposed Solution – Overview of Features">
             <ul className="list-disc pl-5 space-y-1">
-              <li>
-                Symptoms-based triage with severity bands (green/yellow/red) and
-                next steps.
-              </li>
-              <li>
-                AI specialist modules (dermatology, radiology, cardiology) for
-                contextual guidance.
-              </li>
-              <li>
-                PEARL-inspired CT reconstruction preview for lower dose, clearer
-                images.
-              </li>
-              <li>
-                Lab report analyzer that extracts values, flags risks, and
-                suggests follow-up.
-              </li>
-              <li>
-                Government schemes assistant that checks eligibility and steps.
-              </li>
-              <li>
-                Emergency education tiles with audio guidance for first aid.
-              </li>
-              <li>Multi-language UX for accessibility across India.</li>
+              <li>Symptoms‑based triage with severity bands and next steps.</li>
+              <li>AI specialist modules (dermatology, radiology, cardiology).</li>
+              <li>Multilingual, voice‑first chatbot.</li>
+              <li>PEARL CT reconstruction previews.</li>
+              <li>Lab report analyzer with follow‑up generation.</li>
+              <li>Government schemes & benefits assistant.</li>
+              <li>Preliminary triage & emergency education.</li>
             </ul>
           </Card>
         </div>
 
-        {/* System Architecture */}
-        <div className="mt-6 grid lg:grid-cols-1 gap-6">
-          <Card title="System Architecture">
+        {/* Proposed Solution – Interactive Architecture Diagram */}
+        <div id="architecture" className="mt-6 grid lg:grid-cols-1 gap-6">
+          <Card title="Proposed Solution – Interactive Architecture Diagram">
             <div className="space-y-3">
               <p>High‑level architecture for LUMEN.</p>
               <ZoomableImage
